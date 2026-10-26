@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1450" width="100%" height="100%" style="background:#0f172a; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#34d399"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <!-- TITLE HEADER -->
+  <rect x="40" y="30" width="2120" height="80" rx="12" fill="url(#headerGrad)" stroke="#334155" stroke-width="2"/>
+  <text x="75" y="72" fill="#38bdf8" font-size="26" font-weight="800" letter-spacing="0.5">NIRAPOD PARKING — DISTRIBUTED MICROSERVICES ARCHITECTURE</text>
+  <text x="75" y="96" fill="#94a3b8" font-size="16" font-weight="500">Database-per-Service Isolation + Keycloak OAuth2 Identity + Spring Cloud Gateway</text>
+
+  <!-- ========================================== -->
+  <!-- LEFT PANEL: CORE BUSINESS MICROSERVICES    -->
+  <!-- ========================================== -->
+  <rect x="40" y="140" width="860" height="740" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#glow)"/>
+  <rect x="40" y="140" width="860" height="50" rx="14" fill="#0f172a"/>
+  <text x="65" y="173" fill="#38bdf8" font-size="18" font-weight="800">CORE BUSINESS MICROSERVICES (SPRING BOOT 3 + OPENFEIGN)</text>
+
+  <!-- 3. booking-service -->
+  <rect x="80" y="215" width="780" height="150" rx="10" fill="#0f172a" stroke="#818cf8" stroke-width="2"/>
+  <text x="110" y="255" fill="#a5b4fc" font-size="22" font-weight="800">📅 3. booking-service</text>
+  <text x="110" y="285" fill="#e2e8f0" font-size="16">• Slot Reservation &amp; Double-Booking Overlap Prevention</text>
+  <text x="110" y="312" fill="#e2e8f0" font-size="16">• Fare Calculation (Hours × Hourly Rate)</text>
+  <text x="110" y="339" fill="#e2e8f0" font-size="16">• Fast SUM / COUNT Queries for Host Earnings &amp; Bookings</text>
+
+  <!-- Feign arrow from booking to parking -->
+  <line x1="470" y1="365" x2="470" y2="435" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrowAmber)"/>
+  <rect x="360" y="385" width="220" height="30" rx="5" fill="#1e293b" stroke="#d97706" stroke-width="1.5"/>
+  <text x="375" y="405" fill="#fbbf24" font-size="13" font-weight="700">OpenFeign: Fetch Slot Rate</text>
+
+  <!-- 2. parking-service -->
+  <rect x="80" y="435" width="780" height="150" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+  <text x="110" y="475" fill="#6ee7b7" font-size="22" font-weight="800">🅿️ 2. parking-service</text>
+  <text x="110" y="505" fill="#e2e8f0" font-size="16">• Garage Listing Management (Active / Occupied Toggle)</text>
+  <text x="110" y="532" fill="#e2e8f0" font-size="16">• 1-Click Browser GPS Capture (navigator.geolocation)</text>
+  <text x="110" y="559" fill="#e2e8f0" font-size="16">• Area Search (Stage 1) &amp; Haversine 2 km Distance Query (Stage 2)</text>
+
+  <!-- Feign arrow from parking to user-service -->
+  <line x1="470" y1="585" x2="470" y2="655" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrowAmber)"/>
+  <rect x="360" y="605" width="220" height="30" rx="5" fill="#1e293b" stroke="#d97706" stroke-width="1.5"/>
+  <text x="375" y="625" fill="#fbbf24" font-size="13" font-weight="700">OpenFeign: Verify Host KYC</text>
+
+  <!-- 1. user-service -->
+  <rect x="80" y="655" width="780" height="185" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+  <text x="110" y="695" fill="#7dd3fc" font-size="22" font-weight="800">👤 1. user-service</text>
+  <text x="110" y="725" fill="#e2e8f0" font-size="16">• Unified User Profile (Synced from Keycloak sub claim)</text>
+  <text x="110" y="752" fill="#e2e8f0" font-size="16">• Driver Vehicle Plate Registration (e.g., Dhaka Metro-Ga 12-3456)</text>
+  <text x="110" y="779" fill="#e2e8f0" font-size="16">• "Become a Host" Online KYC (NID + Holding Tax/Allotment + Slot Photo)</text>
+  <text x="110" y="806" fill="#4ade80" font-size="16" font-weight="700">• Admin 1-Click Approval (sets is_verified_host = true)</text>
+
+  <!-- ========================================== -->
+  <!-- BOTTOM-LEFT: ISOLATED DATABASES            -->
+  <!-- ========================================== -->
+  <rect x="40" y="920" width="860" height="490" rx="14" fill="#064e3b" stroke="#34d399" stroke-width="2" filter="url(#glow)"/>
+  <rect x="40" y="920" width="860" height="50" rx="14" fill="#022c22"/>
+  <text x="65" y="953" fill="#6ee7b7" font-size="18" font-weight="800">ISOLATED DATABASE-PER-SERVICE LAYER (POSTGRESQL / MYSQL)</text>
+
+  <!-- user_db -->
+  <rect x="70" y="990" width="250" height="380" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+  <text x="90" y="1030" fill="#7dd3fc" font-size="20" font-weight="800">🗄️ user_db</text>
+  <text x="90" y="1055" fill="#94a3b8" font-size="13">Owned by user-service</text>
+  <line x1="90" y1="1068" x2="300" y2="1068" stroke="#334155" stroke-width="1.5"/>
+  <text x="90" y="1095" fill="#38bdf8" font-size="15" font-weight="700">TABLE: users</text>
+  <text x="90" y="1120" fill="#cbd5e1" font-size="13">• id (PK)</text>
+  <text x="90" y="1142" fill="#cbd5e1" font-size="13">• keycloak_id (UK)</text>
+  <text x="90" y="1164" fill="#cbd5e1" font-size="13">• full_name, email</text>
+  <text x="90" y="1186" fill="#cbd5e1" font-size="13">• phone_number</text>
+  <text x="90" y="1208" fill="#cbd5e1" font-size="13">• vehicle_plate</text>
+  <text x="90" y="1230" fill="#4ade80" font-size="13" font-weight="700">• is_verified_host</text>
+  <line x1="90" y1="1245" x2="300" y2="1245" stroke="#334155" stroke-width="1.5"/>
+  <text x="90" y="1272" fill="#38bdf8" font-size="15" font-weight="700">TABLE: host_kyc</text>
+  <text x="90" y="1297" fill="#cbd5e1" font-size="13">• id (PK), user_id (FK)</text>
+  <text x="90" y="1319" fill="#cbd5e1" font-size="13">• nid_number, photo_url</text>
+  <text x="90" y="1341" fill="#cbd5e1" font-size="13">• ownership_doc_url</text>
+  <text x="90" y="1363" fill="#fbbf24" font-size="13">• status (PENDING...)</text>
+
+  <!-- parking_db -->
+  <rect x="345" y="990" width="250" height="380" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+  <text x="365" y="1030" fill="#6ee7b7" font-size="20" font-weight="800">🗄️ parking_db</text>
+  <text x="365" y="1055" fill="#94a3b8" font-size="13">Owned by parking-service</text>
+  <line x1="365" y1="1068" x2="575" y2="1068" stroke="#334155" stroke-width="1.5"/>
+  <text x="365" y="1095" fill="#34d399" font-size="15" font-weight="700">TABLE: parking_listings</text>
+  <text x="365" y="1120" fill="#cbd5e1" font-size="13">• id (PK)</text>
+  <text x="365" y="1142" fill="#fbbf24" font-size="13">• host_user_id (Logical)</text>
+  <text x="365" y="1164" fill="#cbd5e1" font-size="13">• title</text>
+  <text x="365" y="1186" fill="#cbd5e1" font-size="13">• area_name</text>
+  <text x="365" y="1208" fill="#cbd5e1" font-size="13">• full_address</text>
+  <text x="365" y="1230" fill="#38bdf8" font-size="13" font-weight="700">• latitude (Browser GPS)</text>
+  <text x="365" y="1252" fill="#38bdf8" font-size="13" font-weight="700">• longitude (Browser GPS)</text>
+  <text x="365" y="1274" fill="#cbd5e1" font-size="13">• vehicle_type (CAR/BIKE)</text>
+  <text x="365" y="1296" fill="#cbd5e1" font-size="13">• hourly_rate</text>
+  <text x="365" y="1318" fill="#cbd5e1" font-size="13">• available_from, until</text>
+  <text x="365" y="1340" fill="#4ade80" font-size="13">• status (ACTIVE...)</text>
+
+  <!-- booking_db -->
+  <rect x="620" y="990" width="250" height="380" rx="10" fill="#0f172a" stroke="#818cf8" stroke-width="2"/>
+  <text x="640" y="1030" fill="#a5b4fc" font-size="20" font-weight="800">🗄️ booking_db</text>
+  <text x="640" y="1055" fill="#94a3b8" font-size="13">Owned by booking-service</text>
+  <line x1="640" y1="1068" x2="850" y2="1068" stroke="#334155" stroke-width="1.5"/>
+  <text x="640" y="1095" fill="#818cf8" font-size="15" font-weight="700">TABLE: bookings</text>
+  <text x="640" y="1120" fill="#cbd5e1" font-size="13">• id (PK)</text>
+  <text x="640" y="1142" fill="#fbbf24" font-size="13">• listing_id (Logical ID)</text>
+  <text x="640" y="1164" fill="#fbbf24" font-size="13">• host_user_id (Logical ID)</text>
+  <text x="640" y="1186" fill="#fbbf24" font-size="13">• driver_user_id (Logical)</text>
+  <text x="640" y="1208" fill="#e2e8f0" font-size="13">• driver_vehicle_plate</text>
+  <text x="640" y="1230" fill="#cbd5e1" font-size="13">• start_time</text>
+  <text x="640" y="1252" fill="#cbd5e1" font-size="13">• end_time</text>
+  <text x="640" y="1274" fill="#4ade80" font-size="13" font-weight="700">• total_amount (Hours×Rate)</text>
+  <text x="640" y="1296" fill="#818cf8" font-size="13">• status (CONFIRMED...)</text>
+  <text x="640" y="1318" fill="#cbd5e1" font-size="13">• created_at</text>
+
+  <!-- ========================================== -->
+  <!-- RIGHT-TOP: ANGULAR 17+ CLIENT LAYER        -->
+  <!-- ========================================== -->
+  <rect x="940" y="140" width="1220" height="420" rx="14" fill="#1e293b" stroke="#f43f5e" stroke-width="2" filter="url(#glow)"/>
+  <rect x="940" y="140" width="1220" height="50" rx="14" fill="#0f172a"/>
+  <text x="965" y="173" fill="#fb7185" font-size="18" font-weight="800">CLIENT LAYER (ANGULAR 17+ RESPONSIVE PWA)</text>
+
+  <rect x="970" y="215" width="370" height="150" rx="10" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+  <text x="990" y="255" fill="#ffffff" font-size="20" font-weight="800">🚗 Driver View</text>
+  <text x="990" y="285" fill="#cbd5e1" font-size="15">• Card-First Area Search Feed</text>
+  <text x="990" y="312" fill="#cbd5e1" font-size="15">• Split-Screen Leaflet Clustered Map</text>
+  <text x="990" y="339" fill="#cbd5e1" font-size="15">• Digital Parking Pass &amp; GMaps Nav</text>
+
+  <rect x="1365" y="215" width="370" height="150" rx="10" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+  <text x="1385" y="255" fill="#ffffff" font-size="20" font-weight="800">🏠 Host View</text>
+  <text x="1385" y="285" fill="#cbd5e1" font-size="15">• "Become a Host" KYC Upload Form</text>
+  <text x="1385" y="312" fill="#cbd5e1" font-size="15">• Parking Listing Management</text>
+  <text x="1385" y="339" fill="#4ade80" font-size="15">• Live Earnings Counter Cards (SUM)</text>
+
+  <rect x="1760" y="215" width="370" height="150" rx="10" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+  <text x="1780" y="255" fill="#ffffff" font-size="20" font-weight="800">⚙️ Admin Portal</text>
+  <text x="1780" y="285" fill="#cbd5e1" font-size="15">• Pending Host KYC Review List</text>
+  <text x="1780" y="312" fill="#cbd5e1" font-size="15">• 1-Click [Approve / Reject] Button</text>
+  <text x="1780" y="339" fill="#38bdf8" font-size="15">• System Summary Cards (COUNT)</text>
+
+  <!-- Sub-block: Zero-Cost Map & Browser Tools -->
+  <rect x="970" y="390" width="1160" height="140" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="990" y="420" fill="#94a3b8" font-size="14" font-weight="700">100% FREE MAP &amp; BROWSER INTEGRATION (ZERO API COST)</text>
+
+  <rect x="990" y="440" width="360" height="70" rx="8" fill="#1e293b" stroke="#f43f5e" stroke-width="1.2"/>
+  <text x="1010" y="468" fill="#ffffff" font-size="14" font-weight="700">📍 HTML5 Geolocation</text>
+  <text x="1010" y="492" fill="#94a3b8" font-size="12">1-Click Lat/Lng Browser Capture</text>
+
+  <rect x="1370" y="440" width="360" height="70" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="1390" y="468" fill="#ffffff" font-size="14" font-weight="700">🗺️ Google Maps Iframe + URL Intent</text>
+  <text x="1390" y="492" fill="#94a3b8" font-size="12">Zero-API Preview &amp; Deep-Link Nav</text>
+
+  <rect x="1750" y="440" width="360" height="70" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
+  <text x="1770" y="468" fill="#ffffff" font-size="14" font-weight="700">🗺️ Leaflet.js + MarkerCluster</text>
+  <text x="1770" y="492" fill="#94a3b8" font-size="12">Stage 2 Split-View Multi-Pin Map</text>
+
+  <!-- ========================================== -->
+  <!-- RIGHT-BOTTOM: SECURITY & INFRASTRUCTURE    -->
+  <!-- ========================================== -->
+  <rect x="940" y="600" width="1220" height="420" rx="14" fill="#172554" stroke="#60a5fa" stroke-width="2" filter="url(#glow)"/>
+  <rect x="940" y="600" width="1220" height="50" rx="14" fill="#0f172a"/>
+  <text x="965" y="633" fill="#93c5fd" font-size="18" font-weight="800">SECURITY &amp; ROUTING INFRASTRUCTURE (KEYCLOAK + SPRING CLOUD)</text>
+
+  <!-- Keycloak -->
+  <rect x="970" y="675" width="560" height="180" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+  <text x="995" y="715" fill="#7dd3fc" font-size="22" font-weight="800">🔐 Keycloak Server (OAuth2 / OIDC)</text>
+  <text x="995" y="745" fill="#e2e8f0" font-size="16">• Handles User Registration &amp; Secure Login Screen</text>
+  <text x="995" y="772" fill="#e2e8f0" font-size="16">• Issues Cryptographic JWT Tokens with Roles (DRIVER, HOST, ADMIN)</text>
+  <text x="995" y="802" fill="#6ee7b7" font-size="16" font-weight="700">• Dedicated DB: keycloak_db (Automated schema)</text>
+
+  <!-- Gateway -->
+  <rect x="1570" y="675" width="560" height="180" rx="10" fill="#0f172a" stroke="#60a5fa" stroke-width="2"/>
+  <text x="1595" y="715" fill="#93c5fd" font-size="22" font-weight="800">🌐 api-gateway</text>
+  <text x="1595" y="745" fill="#e2e8f0" font-size="16">• Spring Cloud Gateway (Single Port 8080 Entry Point)</text>
+  <text x="1595" y="772" fill="#e2e8f0" font-size="16">• Validates Keycloak OAuth2 JWT Tokens</text>
+  <text x="1595" y="802" fill="#e2e8f0" font-size="16">• Routes Requests to Microservices via Eureka Discovery</text>
+
+  <!-- Eureka Discovery -->
+  <rect x="970" y="880" width="1160" height="110" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+  <text x="995" y="920" fill="#fde68a" font-size="20" font-weight="800">🧭 discovery-service (Netflix Eureka Server)</text>
+  <text x="995" y="950" fill="#e2e8f0" font-size="15">• All 3 Microservices (user-service, parking-service, booking-service) auto-register on startup</text>
+  <text x="995" y="975" fill="#e2e8f0" font-size="15">• Enables OpenFeign Declarative REST clients without hardcoded IP addresses</text>
+
+  <!-- CONNECTING ARROWS -->
+  <!-- Angular to Keycloak / Gateway -->
+  <line x1="1550" y1="560" x2="1550" y2="600" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <text x="1560" y="585" fill="#38bdf8" font-size="14" font-weight="700">REST + OAuth2 JWT</text>
+
+  <!-- Gateway to Microservices -->
+  <path d="M 1570 765 L 900 765" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <text x="915" y="755" fill="#38bdf8" font-size="14" font-weight="700">Routed Requests</text>
+
+  <!-- Microservices to Databases -->
+  <line x1="200" y1="840" x2="200" y2="990" stroke="#34d399" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <line x1="470" y1="840" x2="470" y2="990" stroke="#34d399" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <line x1="740" y1="840" x2="740" y2="990" stroke="#34d399" stroke-width="3" marker-end="url(#arrowGreen)"/>
+</svg>

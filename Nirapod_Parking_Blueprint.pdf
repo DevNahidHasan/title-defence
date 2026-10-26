@@ -1,0 +1,1570 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+endobj
+4 0 obj
+<< /Length 9705 >>
+stream
+q
+0.06 0.09 0.16 rg
+40.00 745.89 515.28 56.00 re f
+Q
+BT
+1 1 1 rg
+/F2 15 Tf
+56.00 777.89 Td
+(Nirapod Parking: Complete System Blueprint & Defense Specification) Tj
+ET
+BT
+0.58 0.77 0.99 rg
+/F1 9.5 Tf
+56.00 759.89 Td
+(The Community-Driven Residential Parking Marketplace | Final Year Capstone Blueprint) Tj
+ET
+BT
+0.09 0.4 0.2 rg
+/F2 10.5 Tf
+40.00 718.89 Td
+(Core Execution Strategy \(MVP-First -> Incremental A+ Upgrades\)) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 704.69 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 704.69 Td
+(Stage 1 \(Core Microservices + Minimal MVP\):) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+254.33 704.69 Td
+(Lay out the enterprise Spring Cloud Microservices architecture) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 692.18 Td
+(\(api-gateway, discovery-service, user-service, parking-service, booking-service\) with Database-per-Service isolation,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 679.67 Td
+(secured by Keycloak \(OAuth2 / OIDC\), including Card-First search, online KYC, basic booking, and Host/Admin Dashboard) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 667.15 Td
+(Summary Cards \(SUM/COUNT\).) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 652.64 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 652.64 Td
+(Stage 2 \(Geospatial "Wow Factor"\):) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+216.70 652.64 Td
+(Plug in Haversine Proximity Search \("Find Near Me"\) and the Airbnb-style) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 640.13 Td
+(Split-View Leaflet Clustered Map \(Leaflet.markercluster\) using the GPS coordinates already captured in Stage 1.) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 625.62 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 625.62 Td
+(Stage 3 \(Lightweight Defense Polish\):) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+225.35 625.62 Td
+(Add a simple SQL overlap check \(preventing double-booking\) and a printable Digital) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 613.11 Td
+(Parking Pass \(with Vehicle Plate matching\).) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 12.5 Tf
+40.00 589.79 Td
+(1. System Architecture \(Microservices + Database-per-Service + Keycloak OAuth2\)) Tj
+ET
+q
+0.12 0.23 0.54 rg
+40.00 584.29 515.28 1.50 re f
+Q
+q
+0.97 0.98 0.99 rg
+0.75 0.8 0.86 RG 0.8 w
+40.00 382.79 515.28 195.00 re B
+Q
+BT
+0.2 0.25 0.33 rg
+/F2 8.5 Tf
+105.00 563.79 Td
+(NIRAPOD PARKING - DISTRIBUTED MICROSERVICES & ISOLATED DATABASE ARCHITECTURE) Tj
+ET
+q
+1 1 1 rg
+0.58 0.64 0.72 RG 0.8 w
+50.00 523.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+58.00 542.79 Td
+(Driver View \(Angular 17+\)) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+58.00 530.79 Td
+(Card Feed + Clustered Map + Pass) Tj
+ET
+q
+1 1 1 rg
+0.58 0.64 0.72 RG 0.8 w
+217.76 523.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+225.76 542.79 Td
+(Host View \(Angular 17+\)) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+225.76 530.79 Td
+(KYC Upload + Listings + Earnings) Tj
+ET
+q
+1 1 1 rg
+0.58 0.64 0.72 RG 0.8 w
+385.52 523.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+393.52 542.79 Td
+(Admin Portal \(Angular 17+\)) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+393.52 530.79 Td
+(1-Click KYC Approval + Stats) Tj
+ET
+q
+0.94 0.96 1 rg
+0.15 0.39 0.92 RG 0.8 w
+50.00 481.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+58.00 500.79 Td
+(Keycloak OAuth2 \(keycloak_db\)) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+58.00 488.79 Td
+(Login, Register, JWT & Roles) Tj
+ET
+q
+0.94 0.96 1 rg
+0.15 0.39 0.92 RG 0.8 w
+217.76 481.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+225.76 500.79 Td
+(api-gateway \(Spring Cloud\)) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+225.76 488.79 Td
+(OAuth2 Token Relay & Routing) Tj
+ET
+q
+0.94 0.96 1 rg
+0.15 0.39 0.92 RG 0.8 w
+385.52 481.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+393.52 500.79 Td
+(discovery-service \(Eureka\)) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+393.52 488.79 Td
+(Dynamic Service Registration) Tj
+ET
+q
+1 1 1 rg
+0.12 0.23 0.54 RG 0.8 w
+50.00 439.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+58.00 458.79 Td
+(1. user-service) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+58.00 446.79 Td
+(Profile, Vehicle Plate & Host KYC) Tj
+ET
+q
+1 1 1 rg
+0.12 0.23 0.54 RG 0.8 w
+217.76 439.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+225.76 458.79 Td
+(2. parking-service) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+225.76 446.79 Td
+(Listings, GPS & Haversine Search) Tj
+ET
+q
+1 1 1 rg
+0.12 0.23 0.54 RG 0.8 w
+385.52 439.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+393.52 458.79 Td
+(3. booking-service) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+393.52 446.79 Td
+(Reservation, OpenFeign & Stats) Tj
+ET
+q
+0.93 0.99 0.96 rg
+0.02 0.59 0.41 RG 0.8 w
+50.00 397.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+58.00 416.79 Td
+(user_db \(Isolated DB\)) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+58.00 404.79 Td
+(Tables: users, host_kyc) Tj
+ET
+q
+0.93 0.99 0.96 rg
+0.02 0.59 0.41 RG 0.8 w
+217.76 397.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+225.76 416.79 Td
+(parking_db \(Isolated DB\)) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+225.76 404.79 Td
+(Table: parking_listings) Tj
+ET
+q
+0.93 0.99 0.96 rg
+0.02 0.59 0.41 RG 0.8 w
+385.52 397.79 159.76 32.00 re B
+Q
+BT
+0.06 0.09 0.16 rg
+/F2 8.5 Tf
+393.52 416.79 Td
+(booking_db \(Isolated DB\)) Tj
+ET
+BT
+0.28 0.33 0.41 rg
+/F1 7.5 Tf
+393.52 404.79 Td
+(Table: bookings) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 12.5 Tf
+40.00 354.79 Td
+(2. Database-per-Service Schema \(3 Isolated Databases, 4 Core Tables\)) Tj
+ET
+q
+0.12 0.23 0.54 rg
+40.00 349.29 515.28 1.50 re f
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 9.5 Tf
+40.00 333.29 Td
+(Each microservice owns its own isolated database. There are no cross-database foreign keys; cross-service references) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.5 Tf
+40.00 320.18 Td
+(\(host_user_id, listing_id, driver_user_id\) are stored as logical IDs and validated via OpenFeign REST calls.) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 10.5 Tf
+40.00 297.57 Td
+(A. user_db \(Owned exclusively by user-service\)) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 272.57 92.75 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+46.00 279.57 Td
+(Table) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+132.75 272.57 195.81 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+138.75 279.57 Td
+(Columns) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+328.56 272.57 226.72 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+334.56 279.57 Td
+(Key Details & Purpose) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 228.07 92.75 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 259.07 Td
+(users) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+132.75 228.07 195.81 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 259.07 Td
+(id \(PK\), keycloak_id \(UK\), full_name, email,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 247.57 Td
+(phone_number, vehicle_plate, is_verified_host,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 236.07 Td
+(created_at) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+328.56 228.07 226.72 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 259.07 Td
+(Stores unified Driver/Host profile synced from) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 247.57 Td
+(Keycloak JWT. is_verified_host becomes true after) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 236.07 Td
+(Admin KYC approval.) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 183.57 92.75 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 214.57 Td
+(host_kyc) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+132.75 183.57 195.81 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 214.57 Td
+(id \(PK\), user_id \(FK -> users.id\), nid_number,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 203.07 Td
+(nid_photo_url, ownership_doc_url,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 191.57 Td
+(slot_photo_url, status, admin_remarks) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+328.56 183.57 226.72 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 214.57 Td
+(Stores Uber/Pathao-style Host KYC documents \(NID,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 203.07 Td
+(Holding Tax/Allotment Slip, Garage Bay Photo\) and) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 191.57 Td
+(status \(PENDING, APPROVED, REJECTED\).) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 10.5 Tf
+40.00 160.57 Td
+(B. parking_db \(Owned exclusively by parking-service\)) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 135.57 92.75 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+46.00 142.57 Td
+(Table) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+132.75 135.57 195.81 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+138.75 142.57 Td
+(Columns) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+328.56 135.57 226.72 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+334.56 142.57 Td
+(Key Details & Purpose) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 79.57 92.75 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 122.07 Td
+(parking_listings) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+132.75 79.57 195.81 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 122.07 Td
+(id \(PK\), host_user_id \(Logical ID\), title,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 110.57 Td
+(area_name, full_address, latitude, longitude,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 99.07 Td
+(vehicle_type, hourly_rate, available_from,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 87.57 Td
+(available_until, has_cctv, has_guard, status) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+328.56 79.57 226.72 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 122.07 Td
+(Every Host owns 100% of their listing row. Latitude &) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 110.57 Td
+(longitude are captured via 1-click Browser GPS in Stage) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 99.07 Td
+(1 and reused for Haversine & Map Clustering in Stage 2.) Tj
+ET
+BT /F1 8 Tf 0.45 0.50 0.58 rg 40 20 Td (Nirapod Parking: Complete System Blueprint & Defense Specification   |   Page 1 of 3) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 10325 >>
+stream
+BT
+0.12 0.23 0.54 rg
+/F2 10.5 Tf
+40.00 786.89 Td
+(C. booking_db \(Owned exclusively by booking-service\)) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 761.89 92.75 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+46.00 768.89 Td
+(Table) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+132.75 761.89 195.81 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+138.75 768.89 Td
+(Columns) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+328.56 761.89 226.72 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+334.56 768.89 Td
+(Key Details & Purpose) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 705.89 92.75 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 748.39 Td
+(bookings) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+132.75 705.89 195.81 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 748.39 Td
+(id \(PK\), listing_id \(Logical ID\), host_user_id) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 736.89 Td
+(\(Logical ID\), driver_user_id \(Logical ID\),) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 725.39 Td
+(driver_vehicle_plate, start_time, end_time,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+138.75 713.89 Td
+(total_amount, status, created_at) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+328.56 705.89 226.72 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 748.39 Td
+(Stores reservations, calculates total_amount \(Hours x) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 736.89 Td
+(Rate\), and provides fast SUM/COUNT queries for Host) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+334.56 725.39 Td
+(earnings and booking statistics.) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 12.5 Tf
+40.00 679.89 Td
+(3. Stage 1 End-to-End Operational Workflow) Tj
+ET
+q
+0.12 0.23 0.54 rg
+40.00 674.39 515.28 1.50 re f
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 9.5 Tf
+40.00 658.39 Td
+(Unified Dual-Role Concept \(The "Mirpur-to-Banani Commuter" Model\): Every user signs up once via Keycloak and starts) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.5 Tf
+40.00 645.28 Td
+(as a Driver by default. If they also own a flat with an empty daytime garage, they click [Become a Host], upload their) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.5 Tf
+40.00 632.17 Td
+(KYC proof, and once approved by the Admin, they can switch freely between Driver View and Host Dashboard using the) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.5 Tf
+40.00 619.06 Td
+(same account.) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 591.45 118.51 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+46.00 598.45 Td
+(Workflow Phase) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+158.51 591.45 128.82 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+164.51 598.45 Td
+(Services Involved) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+287.33 591.45 267.95 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+293.33 598.45 Td
+(Step-by-Step Execution) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 546.95 118.51 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 577.95 Td
+(Flow 1: Sign-Up & Driver) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 566.45 Td
+(Profile) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+158.51 546.95 128.82 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+164.51 577.95 Td
+(Keycloak -> api-gateway ->) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+164.51 566.45 Td
+(user-service \(user_db\)) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+287.33 546.95 267.95 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 577.95 Td
+(1. User registers/logs in via Keycloak OAuth2 login page. 2.) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 566.45 Td
+(Completes initial profile with Phone Number and Vehicle Plate) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 554.95 Td
+(Number. 3. Ready to search and book parking as a Driver.) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 490.95 118.51 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 533.45 Td
+(Flow 2: "Become a Host" &) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 521.95 Td
+(Admin KYC) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+158.51 490.95 128.82 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+164.51 533.45 Td
+(user-service \(user_db\)) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+287.33 490.95 267.95 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 533.45 Td
+(1. User clicks "Become a Host" and uploads NID photo, Holding) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 521.95 Td
+(Tax/Allotment Slip, and Garage Pillar Photo. 2. Admin reviews) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 510.45 Td
+(Pending KYC in Admin Portal and clicks [Approve]. 3.) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 498.95 Td
+(is_verified_host becomes true.) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 434.95 118.51 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 477.45 Td
+(Flow 3: Creating a Parking) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 465.95 Td
+(Spot) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+158.51 434.95 128.82 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+164.51 477.45 Td
+(parking-service \(parking_db\)) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+164.51 465.95 Td
+(<-> user-service) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+287.33 434.95 267.95 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 477.45 Td
+(1. Host enters Title, Area, Address, Vehicle Type, Rate, and clicks) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 465.95 Td
+([Capture Current GPS]. 2. parking-service calls user-service via) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 454.45 Td
+(OpenFeign to verify is_verified_host == true. 3. Saves listing in) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 442.95 Td
+(parking_db.) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 367.45 118.51 67.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 421.45 Td
+(Flow 4: Searching, Booking) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 409.95 Td
+(& Navigating) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+158.51 367.45 128.82 67.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+164.51 421.45 Td
+(parking-service <->) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+164.51 409.95 Td
+(booking-service \(booking_db\)) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+287.33 367.45 267.95 67.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 421.45 Td
+(1. Driver searches by Area + Vehicle Type in Card Feed and views) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 409.95 Td
+(Google Maps iframe preview. 2. Picks Start/End Time and) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 398.45 Td
+(confirms booking. 3. booking-service fetches rate via OpenFeign,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 386.95 Td
+(saves booking, updates Host stats, and unlocks Google Maps) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+293.33 375.45 Td
+(navigation.) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 12.5 Tf
+40.00 341.45 Td
+(4. Three-Stage Incremental Build Roadmap) Tj
+ET
+q
+0.12 0.23 0.54 rg
+40.00 335.95 515.28 1.50 re f
+Q
+BT
+0.09 0.4 0.2 rg
+/F2 10.5 Tf
+40.00 314.45 Td
+(STAGE 1: Core Microservices Architecture + Minimal Functional MVP \(Build First\)) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 300.25 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 300.25 Td
+(Infrastructure Setup:) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+155.80 300.25 Td
+(Run Keycloak \(keycloak_db\), discovery-service \(Eureka\), and api-gateway \(Spring Cloud) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 287.74 Td
+(Gateway\).) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 273.23 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 273.23 Td
+(user-service \(user_db\):) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+164.81 273.23 Td
+(Sync logged-in Keycloak user, save Driver phone & vehicle plate, submit Host KYC form \(NID +) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 260.71 Td
+(Holding Tax/Allotment Slip + Slot Photo\), and Admin 1-click [Approve] button.) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 246.20 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 246.20 Td
+(parking-service \(parking_db\):) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+189.65 246.20 Td
+(Verified Host creates a parking listing with 1-click browser GPS \(navigator.geolocation\),) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 233.69 Td
+(toggles spot status \(ACTIVE / INACTIVE\), and Driver searches by Area dropdown + Vehicle Type in a clean Card Feed.) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 219.18 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 219.18 Td
+(booking-service \(booking_db\):) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+189.65 219.18 Td
+(Driver books a spot for a selected time window; service calls parking-service via OpenFeign) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 206.67 Td
+(to calculate price \(Hours x Rate\), saves booking, and unlocks Google Maps iframe preview & URL navigation redirect.) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 192.15 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 192.15 Td
+(Basic Dashboard Summary Cards \(SUM / COUNT\):) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+273.46 192.15 Td
+(Host Dashboard shows Active Spots \(COUNT from parking_db\), Total) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 179.64 Td
+(Bookings \(COUNT from booking_db\), and Total Earnings BDT \(SUM from booking_db\). Admin Portal shows Pending KYC) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 167.13 Td
+(Requests, Verified Hosts \(COUNT from user_db\), and Total Active Listings \(COUNT from parking_db\).) Tj
+ET
+BT
+0.12 0.25 0.69 rg
+/F2 10.5 Tf
+40.00 146.82 Td
+(STAGE 2: Geospatial "Wow Factor" Upgrades) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 132.62 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 132.62 Td
+("Find Near Me" Proximity Search \(Haversine SQL\):) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+280.92 132.62 Td
+(Add a single @Query in parking-service using the Haversine distance) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 120.11 Td
+(formula so drivers can find spots within 2 km of their current GPS coordinate and see "0.4 km away" on every card.) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 105.59 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 105.59 Td
+(Airbnb-Style Split Screen \(Card Feed + Leaflet Clustered Map\):) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+338.32 105.59 Td
+(Render free Leaflet.js + OpenStreetMap alongside the) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 93.08 Td
+(Card Feed with Leaflet.markercluster so multiple spots in the same building automatically group into a \(3\) cluster pin) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 80.57 Td
+(that fans out when clicked.) Tj
+ET
+BT /F1 8 Tf 0.45 0.50 0.58 rg 40 20 Td (Nirapod Parking: Complete System Blueprint & Defense Specification   |   Page 2 of 3) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 4450 >>
+stream
+BT
+0.42 0.13 0.66 rg
+/F2 10.5 Tf
+40.00 786.89 Td
+(STAGE 3: Minimal, High-Visual Polish for Final Defense) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 772.69 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 772.69 Td
+(Simple Double-Booking Prevention:) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+207.96 772.69 Td
+(A single SQL COUNT\(*\) check in booking-service ensuring no existing CONFIRMED) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 760.18 Td
+(booking overlaps the requested start_time and end_time.) Tj
+ET
+BT
+0.12 0.23 0.54 rg
+/F2 9.2 Tf
+42.00 745.67 Td
+(*) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 9.2 Tf
+52.00 745.67 Td
+(Printable Digital Parking Pass:) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+190.85 745.67 Td
+(A clean ticket screen showing the Booking ID, Driver Vehicle Plate Number \(for building) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 9.2 Tf
+52.00 733.15 Td
+(guard verification at the gate\), Host address/phone, time window, and a simulated "Paid via Mock Wallet" badge.) Tj
+ET
+BT
+0.06 0.09 0.16 rg
+/F2 12.5 Tf
+40.00 709.84 Td
+(5. Mapping to University Defense Phases) Tj
+ET
+q
+0.12 0.23 0.54 rg
+40.00 704.34 515.28 1.50 re f
+Q
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 677.84 113.36 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+46.00 684.84 Td
+(Defense Phase) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+153.36 677.84 206.11 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+159.36 684.84 Td
+(What You Present / Demo) Tj
+ET
+q
+0.12 0.23 0.54 rg
+0.8 0.84 0.88 RG 0.5 w
+359.47 677.84 195.81 20.00 re B
+Q
+BT
+1 1 1 rg
+/F2 8.5 Tf
+365.47 684.84 Td
+(Why It Wins Marks) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 621.84 113.36 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 664.34 Td
+(Phase 1: Title Defense) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 652.84 Td
+(\(Current\)) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+153.36 621.84 206.11 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+159.36 664.34 Td
+(Present the Microservices +) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+159.36 652.84 Td
+(Database-per-Service Architecture, Isolated) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+159.36 641.34 Td
+(ERDs, Dual-Role KYC concept, and the 3-Stage) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+159.36 629.84 Td
+(Roadmap.) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+359.47 621.84 195.81 56.00 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+365.47 664.34 Td
+(Shows true microservices isolation \(user_db,) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+365.47 652.84 Td
+(parking_db, booking_db\) + Keycloak OAuth2 +) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+365.47 641.34 Td
+(OpenFeign + Geospatial clustering.) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 577.34 113.36 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 608.34 Td
+(Phase 2: Pre-Defense) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 596.84 Td
+(\(Mid-term\)) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+153.36 577.34 206.11 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+159.36 608.34 Td
+(Demo Stage 1 \(100% Working Microservices MVP +) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+159.36 596.84 Td
+(Dashboard Summary Cards\) + start of Stage 2.) Tj
+ET
+q
+0.97 0.98 0.99 rg
+0.8 0.84 0.88 RG 0.5 w
+359.47 577.34 195.81 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+365.47 608.34 Td
+(Complete working flow from Keycloak login ->) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+365.47 596.84 Td
+(Host KYC approval -> Listing creation ->) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+365.47 585.34 Td
+(Booking & live dashboard counters.) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+40.00 532.84 113.36 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 563.84 Td
+(Phase 3: Final Defense) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F2 8.5 Tf
+46.00 552.34 Td
+(\(End-term\)) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+153.36 532.84 206.11 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+159.36 563.84 Td
+(Demo Stage 1 + Stage 2 \(Haversine + Clustered) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+159.36 552.34 Td
+(Map\) + Stage 3 \(Overlap Prevention & Digital) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+159.36 540.84 Td
+(Pass\).) Tj
+ET
+q
+1 1 1 rg
+0.8 0.84 0.88 RG 0.5 w
+359.47 532.84 195.81 44.50 re B
+Q
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+365.47 563.84 Td
+(Visual split-screen map clustering + live) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+365.47 552.34 Td
+(proximity search + complete microservices) Tj
+ET
+BT
+0.12 0.16 0.23 rg
+/F1 8.5 Tf
+365.47 540.84 Td
+(demonstration.) Tj
+ET
+BT /F1 8 Tf 0.45 0.50 0.58 rg 40 20 Td (Nirapod Parking: Complete System Blueprint & Defense Specification   |   Page 3 of 3) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Type /Catalog /Pages 3 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000283 00000 n 
+0000010040 00000 n 
+0000010182 00000 n 
+0000020560 00000 n 
+0000020702 00000 n 
+0000025204 00000 n 
+0000025346 00000 n 
+trailer
+<< /Size 11 /Root 10 0 R >>
+startxref
+25396
+%%EOF

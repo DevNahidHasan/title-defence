@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="100%" style="background:#ffffff; font-family:'Segoe UI', -apple-system, sans-serif;">
+  <defs>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="roadHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <marker id="stageArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <rect x="25" y="20" width="950" height="50" rx="8" fill="url(#roadHeader)"/>
+  <text x="45" y="51" fill="#ffffff" font-size="16" font-weight="700">NIRAPOD PARKING — 3-STAGE EXECUTION ROADMAP</text>
+
+  <!-- STAGE 1 CARD -->
+  <rect x="25" y="90" width="290" height="240" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="25" y="90" width="290" height="38" rx="8" fill="#dcfce7"/>
+  <text x="40" y="114" fill="#166534" font-size="12" font-weight="700">STAGE 1: Core Microservices MVP</text>
+  <text x="40" y="145" fill="#0f172a" font-size="11" font-weight="600">• Spring Cloud Infrastructure</text>
+  <text x="52" y="162" fill="#64748b" font-size="10">Keycloak OAuth2 + Gateway + Eureka</text>
+  <text x="40" y="185" fill="#0f172a" font-size="11" font-weight="600">• 3 Business Microservices</text>
+  <text x="52" y="202" fill="#64748b" font-size="10">user-service, parking-service, booking-service</text>
+  <text x="40" y="225" fill="#0f172a" font-size="11" font-weight="600">• Online KYC &amp; Admin Approval</text>
+  <text x="40" y="248" fill="#0f172a" font-size="11" font-weight="600">• Card Feed + 1-Click GPS Capture</text>
+  <text x="40" y="271" fill="#0f172a" font-size="11" font-weight="600">• Dashboard Summary Cards</text>
+  <text x="52" y="288" fill="#64748b" font-size="10">SUM / COUNT counters for Host &amp; Admin</text>
+  <rect x="40" y="302" width="260" height="20" rx="4" fill="#dcfce7"/>
+  <text x="110" y="316" fill="#166534" font-size="10" font-weight="700">Pre-Defense Target: 100%</text>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="320" y1="210" x2="350" y2="210" stroke="#3b82f6" stroke-width="3" marker-end="url(#stageArrow)"/>
+
+  <!-- STAGE 2 CARD -->
+  <rect x="355" y="90" width="290" height="240" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="355" y="90" width="290" height="38" rx="8" fill="#dbeafe"/>
+  <text x="370" y="114" fill="#1e40af" font-size="12" font-weight="700">STAGE 2: Geospatial Wow-Factor</text>
+  <text x="370" y="145" fill="#0f172a" font-size="11" font-weight="600">• "Find Near Me" Proximity Search</text>
+  <text x="382" y="162" fill="#64748b" font-size="10">Haversine SQL distance within 2 km</text>
+  <text x="370" y="185" fill="#0f172a" font-size="11" font-weight="600">• Airbnb-Style Split View</text>
+  <text x="382" y="202" fill="#64748b" font-size="10">Card Feed + Live Interactive Leaflet Map</text>
+  <text x="370" y="225" fill="#0f172a" font-size="11" font-weight="600">• Map Marker Clustering</text>
+  <text x="382" y="242" fill="#64748b" font-size="10">Leaflet.markercluster groups building spots</text>
+  <text x="370" y="265" fill="#0f172a" font-size="11" font-weight="600">• Interactive flyTo Pan &amp; Zoom</text>
+  <text x="382" y="282" fill="#64748b" font-size="10">Zero database changes required!</text>
+  <rect x="370" y="302" width="260" height="20" rx="4" fill="#dbeafe"/>
+  <text x="440" y="316" fill="#1e40af" font-size="10" font-weight="700">Visual Wow-Factor</text>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="650" y1="210" x2="680" y2="210" stroke="#3b82f6" stroke-width="3" marker-end="url(#stageArrow)"/>
+
+  <!-- STAGE 3 CARD -->
+  <rect x="685" y="90" width="290" height="240" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="685" y="90" width="290" height="38" rx="8" fill="#f3e8ff"/>
+  <text x="700" y="114" fill="#6b21a8" font-size="12" font-weight="700">STAGE 3: Defense Polish</text>
+  <text x="700" y="145" fill="#0f172a" font-size="11" font-weight="600">• Double-Booking Overlap Check</text>
+  <text x="712" y="162" fill="#64748b" font-size="10">Simple SQL COUNT(*) check</text>
+  <text x="700" y="185" fill="#0f172a" font-size="11" font-weight="600">• Printable Digital Parking Pass</text>
+  <text x="712" y="202" fill="#64748b" font-size="10">Clean ticket view with Vehicle Plate</text>
+  <text x="700" y="225" fill="#0f172a" font-size="11" font-weight="600">• Simulated Payment Badge</text>
+  <text x="712" y="242" fill="#64748b" font-size="10">Mock bKash / Wallet status tag</text>
+  <text x="700" y="265" fill="#0f172a" font-size="11" font-weight="600">• Final Load Test &amp; Presentation</text>
+  <text x="712" y="282" fill="#64748b" font-size="10">1-hour finishing touches</text>
+  <rect x="700" y="302" width="260" height="20" rx="4" fill="#f3e8ff"/>
+  <text x="760" y="316" fill="#6b21a8" font-size="10" font-weight="700">Final Defense Ready</text>
+</svg>

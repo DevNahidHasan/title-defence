@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 840" width="100%" height="100%" style="background:#ffffff; font-family:'Segoe UI', -apple-system, sans-serif;">
+  <defs>
+    <filter id="seqShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="seqHead" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <marker id="mArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="mArrowDash" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="25" y="15" width="1050" height="48" rx="8" fill="url(#seqHead)"/>
+  <text x="45" y="44" fill="#ffffff" font-size="15" font-weight="700">STAGE 1: END-TO-END OPERATIONAL SEQUENCE WORKFLOW</text>
+
+  <!-- Actors & Services Columns -->
+  <!-- Col 1: User (Driver/Host) x=80 -->
+  <!-- Col 2: Admin x=210 -->
+  <!-- Col 3: Angular UI x=340 -->
+  <!-- Col 4: Keycloak x=480 -->
+  <!-- Col 5: api-gateway x=620 -->
+  <!-- Col 6: user-service x=760 -->
+  <!-- Col 7: parking-service x=900 -->
+  <!-- Col 8: booking-service x=1020 -->
+
+  <!-- Lifelines -->
+  <line x1="80" y1="105" x2="80" y2="800" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="210" y1="105" x2="210" y2="800" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="340" y1="105" x2="340" y2="800" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="480" y1="105" x2="480" y2="800" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="620" y1="105" x2="620" y2="800" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="760" y1="105" x2="760" y2="800" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="900" y1="105" x2="900" y2="800" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="1020" y1="105" x2="1020" y2="800" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Actor / Service Boxes Top -->
+  <rect x="30" y="75" width="100" height="30" rx="5" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="48" y="95" fill="#0f172a" font-size="11" font-weight="700">👤 User</text>
+
+  <rect x="160" y="75" width="100" height="30" rx="5" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="175" y="95" fill="#0f172a" font-size="11" font-weight="700">⚙️ Admin</text>
+
+  <rect x="290" y="75" width="100" height="30" rx="5" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="305" y="95" fill="#1e40af" font-size="11" font-weight="700">Angular UI</text>
+
+  <rect x="430" y="75" width="100" height="30" rx="5" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="445" y="95" fill="#1e3a8a" font-size="10.5" font-weight="700">🔐 Keycloak</text>
+
+  <rect x="570" y="75" width="100" height="30" rx="5" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="580" y="95" fill="#1e3a8a" font-size="10.5" font-weight="700">🌐 Gateway</text>
+
+  <rect x="710" y="75" width="100" height="30" rx="5" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="720" y="95" fill="#0369a1" font-size="10" font-weight="700">user-service</text>
+
+  <rect x="850" y="75" width="100" height="30" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="855" y="95" fill="#166534" font-size="10" font-weight="700">parking-service</text>
+
+  <rect x="970" y="75" width="100" height="30" rx="5" fill="#f3e8ff" stroke="#7c3aed"/>
+  <text x="975" y="95" fill="#6b21a8" font-size="10" font-weight="700">booking-service</text>
+
+  <!-- FLOW 1 SECTION -->
+  <rect x="40" y="120" width="1020" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="50" y="135" fill="#0284c7" font-size="10.5" font-weight="700">FLOW 1: Sign-Up &amp; Default Driver Profile (Keycloak OAuth2)</text>
+
+  <line x1="80" y1="155" x2="480" y2="155" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="140" y="150" fill="#0f172a" font-size="9.5">1. Registers / Logs in via Keycloak Login Page</text>
+
+  <line x1="480" y1="175" x2="340" y2="175" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#mArrowDash)"/>
+  <text x="360" y="170" fill="#475569" font-size="9.5">2. Returns OAuth2 JWT Token (Role: DRIVER)</text>
+
+  <line x1="80" y1="195" x2="340" y2="195" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="110" y="190" fill="#0f172a" font-size="9.5">3. Completes Profile (Phone + Vehicle Plate Number)</text>
+
+  <line x1="340" y1="215" x2="620" y2="215" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="400" y="210" fill="#0f172a" font-size="9.5">POST /users/profile</text>
+
+  <line x1="620" y1="230" x2="760" y2="230" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="635" y="225" fill="#0f172a" font-size="9.5">Saves in user_db</text>
+
+  <!-- FLOW 2 SECTION -->
+  <rect x="40" y="260" width="1020" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="50" y="275" fill="#0369a1" font-size="10.5" font-weight="700">FLOW 2: "Become a Host" Online KYC Upload &amp; Admin Approval</text>
+
+  <line x1="80" y1="295" x2="340" y2="295" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="100" y="290" fill="#0f172a" font-size="9.5">5. Clicks "Become a Host" &amp; uploads NID, Holding Tax Slip, Slot Photo</text>
+
+  <line x1="340" y1="315" x2="620" y2="315" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="430" y="310" fill="#0f172a" font-size="9.5">POST /users/kyc</text>
+
+  <line x1="620" y1="330" x2="760" y2="330" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="640" y="325" fill="#0f172a" font-size="9.5">Saves in host_kyc (PENDING)</text>
+
+  <line x1="210" y1="355" x2="620" y2="355" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="320" y="350" fill="#0f172a" font-size="9.5">8. Admin views Pending KYC list -> Clicks [Approve]</text>
+
+  <line x1="620" y1="375" x2="760" y2="375" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="640" y="370" fill="#059669" font-size="9.5" font-weight="700">Updates is_verified_host = true</text>
+
+  <!-- FLOW 3 SECTION -->
+  <rect x="40" y="405" width="1020" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="50" y="420" fill="#166534" font-size="10.5" font-weight="700">FLOW 3: Verified Host Creates Parking Spot (1-Click GPS Capture)</text>
+
+  <line x1="80" y1="440" x2="340" y2="440" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="95" y="435" fill="#0f172a" font-size="9.5">10. Fills Listing Form + Clicks [Capture Current Location]</text>
+
+  <line x1="340" y1="460" x2="620" y2="460" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="400" y="455" fill="#0f172a" font-size="9.5">POST /listings (Title, Area, Rate, Lat, Lng)</text>
+
+  <line x1="620" y1="475" x2="900" y2="475" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="700" y="470" fill="#0f172a" font-size="9.5">Routes to parking-service</text>
+
+  <line x1="900" y1="495" x2="760" y2="495" stroke="#d97706" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="770" y="490" fill="#d97706" font-size="9.5" font-weight="600">OpenFeign: checkHostVerified(hostId)</text>
+
+  <line x1="760" y1="510" x2="900" y2="510" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#mArrowDash)"/>
+  <text x="795" y="505" fill="#059669" font-size="9.5">returns true</text>
+
+  <line x1="900" y1="530" x2="900" y2="545" stroke="#16a34a" stroke-width="3"/>
+  <text x="830" y="540" fill="#166534" font-size="9.5">Saves in parking_db (ACTIVE)</text>
+
+  <!-- FLOW 4 SECTION -->
+  <rect x="40" y="565" width="1020" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="50" y="580" fill="#7c3aed" font-size="10.5" font-weight="700">FLOW 4: Driver Searches, Books &amp; Unlocks Turn-by-Turn Navigation</text>
+
+  <line x1="80" y1="600" x2="340" y2="600" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="95" y="595" fill="#0f172a" font-size="9.5">13. Searches by Area ("Dhanmondi") &amp; Vehicle ("CAR")</text>
+
+  <line x1="340" y1="620" x2="620" y2="620" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="400" y="615" fill="#0f172a" font-size="9.5">GET /listings/search?area=Dhanmondi</text>
+
+  <line x1="620" y1="635" x2="900" y2="635" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="700" y="630" fill="#0f172a" font-size="9.5">Returns matching cards for Card Feed</text>
+
+  <line x1="900" y1="655" x2="340" y2="655" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#mArrowDash)"/>
+  <text x="470" y="650" fill="#475569" font-size="9.5">Renders Card Feed + Google Maps iframe Preview</text>
+
+  <line x1="80" y1="675" x2="340" y2="675" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="100" y="670" fill="#0f172a" font-size="9.5">16. Selects Start/End Time -> Clicks [Book Now]</text>
+
+  <line x1="340" y1="695" x2="620" y2="695" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="420" y="690" fill="#0f172a" font-size="9.5">POST /bookings (listingId, timeWindow)</text>
+
+  <line x1="620" y1="710" x2="1020" y2="710" stroke="#2563eb" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="760" y="705" fill="#0f172a" font-size="9.5">Routes to booking-service</text>
+
+  <line x1="1020" y1="730" x2="900" y2="730" stroke="#d97706" stroke-width="1.8" marker-end="url(#mArrow)"/>
+  <text x="910" y="725" fill="#d97706" font-size="9.5" font-weight="600">OpenFeign: getListingRate(id)</text>
+
+  <line x1="900" y1="745" x2="1020" y2="745" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#mArrowDash)"/>
+  <text x="925" y="740" fill="#475569" font-size="9.5">returns 50.00 BDT</text>
+
+  <line x1="1020" y1="765" x2="1020" y2="775" stroke="#7c3aed" stroke-width="3"/>
+  <text x="870" y="770" fill="#6b21a8" font-size="9.5">Calculates Fare (Hours × Rate) &amp; saves in booking_db</text>
+
+  <line x1="1020" y1="790" x2="340" y2="790" stroke="#059669" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#mArrowDash)"/>
+  <text x="500" y="785" fill="#059669" font-size="9.5" font-weight="700">Booking Confirmed! Unlocks "Navigate in Google Maps" Deep-Link</text>
+</svg>

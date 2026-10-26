@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2480 3508" width="2480" height="3508" style="background:#ffffff; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <filter id="cardShadow" x="-2%" y="-2%" width="104%" height="106%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.07"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- HEADER -->
+  <rect x="50" y="50" width="2380" height="150" rx="14" fill="url(#headerGrad)"/>
+  <text x="85" y="105" fill="#ffffff" font-size="34" font-weight="800">NIRAPOD PARKING — END-TO-END OPERATIONAL WORKFLOW</text>
+  <text x="85" y="145" fill="#93c5fd" font-size="20" font-weight="500">Full A4 Sequence: User Journeys, 3-Point KYC Vetting, Proximity Search, Gate Verification &amp; Overstay Poller</text>
+
+  <!-- BADGES -->
+  <g transform="translate(85, 165)">
+    <rect x="0" y="0" width="160" height="26" rx="6" fill="#dbeafe" stroke="#1e40af" stroke-width="1.2"/>
+    <text x="12" y="18" fill="#1e40af" font-size="12" font-weight="700">DUAL-ROLE SSO</text>
+    <rect x="175" y="0" width="190" height="26" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.2"/>
+    <text x="187" y="18" fill="#15803d" font-size="12" font-weight="700">3-POINT HOST KYC</text>
+    <rect x="380" y="0" width="210" height="26" rx="6" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.2"/>
+    <text x="392" y="18" fill="#0f766e" font-size="12" font-weight="700">LEAFLET CLUSTER MAP</text>
+    <rect x="605" y="0" width="225" height="26" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="1.2"/>
+    <text x="617" y="18" fill="#b45309" font-size="12" font-weight="700">ACID TRANSACTION LOCK</text>
+    <rect x="845" y="0" width="220" height="26" rx="6" fill="#f3e8ff" stroke="#6b21a8" stroke-width="1.2"/>
+    <text x="857" y="18" fill="#6b21a8" font-size="12" font-weight="700">DIGITAL LICENSE PASS</text>
+    <rect x="1080" y="0" width="210" height="26" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.2"/>
+    <text x="1092" y="18" fill="#dc2626" font-size="12" font-weight="700">CRON OVERSTAY POLLER</text>
+  </g>
+
+  <!-- FLOW 1 -->
+  <rect x="50" y="230" width="2380" height="530" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="230" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="262" fill="#0f172a" font-size="21" font-weight="800">FLOW 1: CENTRALIZED AUTHENTICATION &amp; UNIFIED DUAL-ROLE REGISTRATION</text>
+
+  <!-- Step 1.1 -->
+  <rect x="80" y="295" width="545" height="440" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="105" y="335" fill="#1e40af" font-size="20" font-weight="800">STEP 1.1</text>
+  <text x="105" y="365" fill="#0f172a" font-size="18" font-weight="700">User Registration / Login</text>
+  <line x1="105" y1="380" x2="600" y2="380" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="105" y="415" fill="#334155" font-size="15.5">• User enters phone/email and password.</text>
+  <text x="105" y="445" fill="#334155" font-size="15.5">• Selects primary goal: Parking or Hosting.</text>
+  <text x="105" y="475" fill="#334155" font-size="15.5">• Unified account model removes multi-login pain.</text>
+
+  <!-- Step 1.2 -->
+  <rect x="665" y="295" width="545" height="440" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="690" y="335" fill="#1e40af" font-size="20" font-weight="800">STEP 1.2</text>
+  <text x="690" y="365" fill="#0f172a" font-size="18" font-weight="700">Gateway Route &amp; Rate Limit</text>
+  <line x1="690" y1="380" x2="1185" y2="380" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="690" y="415" fill="#334155" font-size="15.5">• Gateway intercepts /api/v1/auth at :8080.</text>
+  <text x="690" y="445" fill="#334155" font-size="15.5">• Token bucket algorithm throttles abuse.</text>
+  <text x="690" y="475" fill="#334155" font-size="15.5">• Proxies request securely to Keycloak Server.</text>
+
+  <!-- Step 1.3 -->
+  <rect x="1250" y="295" width="545" height="440" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="1275" y="335" fill="#6b21a8" font-size="20" font-weight="800">STEP 1.3</text>
+  <text x="1275" y="365" fill="#0f172a" font-size="18" font-weight="700">Keycloak RS256 JWT Issuance</text>
+  <line x1="1275" y1="380" x2="1770" y2="380" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1275" y="415" fill="#334155" font-size="15.5">• Keycloak checks credentials in keycloak_db.</text>
+  <text x="1275" y="445" fill="#334155" font-size="15.5">• Grants ROLE_VEHICLE_OWNER &amp; SPOT_OWNER.</text>
+  <text x="1275" y="475" fill="#334155" font-size="15.5">• Signs asymmetric RS256 Bearer Token.</text>
+
+  <!-- Step 1.4 -->
+  <rect x="1835" y="295" width="555" height="440" rx="10" fill="#ffffff" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="1860" y="335" fill="#15803d" font-size="20" font-weight="800">STEP 1.4</text>
+  <text x="1860" y="365" fill="#0f172a" font-size="18" font-weight="700">Profile Init &amp; State Injection</text>
+  <line x1="1860" y1="380" x2="2365" y2="380" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1860" y="415" fill="#334155" font-size="15.5">• Angular Signals store token in secure memory.</text>
+  <text x="1860" y="445" fill="#334155" font-size="15.5">• Async Feign call populates user_db (:8081).</text>
+  <text x="1860" y="475" fill="#334155" font-size="15.5">• User session established with 0 latency.</text>
+
+  <!-- FLOW 2 -->
+  <rect x="50" y="790" width="2380" height="550" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="790" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="822" fill="#0f172a" font-size="21" font-weight="800">FLOW 2: GARAGE SPOT LISTING, 3-POINT KYC VETTING &amp; ADMIN APPROVAL</text>
+
+  <!-- Step 2.1 -->
+  <rect x="80" y="855" width="545" height="460" rx="10" fill="#ffffff" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="105" y="895" fill="#15803d" font-size="20" font-weight="800">STEP 2.1</text>
+  <text x="105" y="925" fill="#0f172a" font-size="18" font-weight="700">Host Fills Listing Wizard</text>
+  <line x1="105" y1="940" x2="600" y2="940" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="105" y="975" fill="#334155" font-size="15.5">• Host enters address, road &amp; bay size.</text>
+  <text x="105" y="1005" fill="#334155" font-size="15.5">• Drops Leaflet pin at exact garage gate.</text>
+  <text x="105" y="1035" fill="#334155" font-size="15.5">• Sets rates for Car &amp; Motorcycle.</text>
+
+  <!-- Step 2.2 -->
+  <rect x="665" y="855" width="545" height="460" rx="10" fill="#ffffff" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="690" y="895" fill="#15803d" font-size="20" font-weight="800">STEP 2.2</text>
+  <text x="690" y="925" fill="#0f172a" font-size="18" font-weight="700">3-Point KYC Document Upload</text>
+  <line x1="690" y1="940" x2="1185" y2="940" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="690" y="975" fill="#334155" font-size="15.5">• Uploads National ID (NID Front/Back).</text>
+  <text x="690" y="1005" fill="#334155" font-size="15.5">• Uploads Flat Allotment / Utility Slip.</text>
+  <text x="690" y="1035" fill="#334155" font-size="15.5">• Uploads 3 clear garage slot photos.</text>
+
+  <!-- Step 2.3 -->
+  <rect x="1250" y="855" width="545" height="460" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="1275" y="895" fill="#b45309" font-size="20" font-weight="800">STEP 2.3</text>
+  <text x="1275" y="925" fill="#0f172a" font-size="18" font-weight="700">Admin KYC Verification Portal</text>
+  <line x1="1275" y1="940" x2="1770" y2="940" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1275" y="975" fill="#334155" font-size="15.5">• Admin reviews documents in portal.</text>
+  <text x="1275" y="1005" fill="#334155" font-size="15.5">• Cross-checks NID with apartment records.</text>
+  <text x="1275" y="1035" fill="#334155" font-size="15.5">• One-click Approve or Request Resubmit.</text>
+
+  <!-- Step 2.4 -->
+  <rect x="1835" y="855" width="555" height="460" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="1860" y="895" fill="#1e40af" font-size="20" font-weight="800">STEP 2.4</text>
+  <text x="1860" y="925" fill="#0f172a" font-size="18" font-weight="700">Spot Activation &amp; Map Live</text>
+  <line x1="1860" y1="940" x2="2365" y2="940" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1860" y="975" fill="#334155" font-size="15.5">• Status updated to KYC_VERIFIED.</text>
+  <text x="1860" y="1005" fill="#334155" font-size="15.5">• Parking Service marks spot STATUS_ACTIVE.</text>
+  <text x="1860" y="1035" fill="#334155" font-size="15.5">• Spot appears on Leaflet map immediately.</text>
+
+  <!-- FLOW 3 -->
+  <rect x="50" y="1370" width="2380" height="550" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="1370" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="1402" fill="#0f172a" font-size="21" font-weight="800">FLOW 3: PROXIMITY SEARCH, LEAFLET CLUSTERING &amp; TRANSACTIONAL RESERVATION</text>
+
+  <!-- Step 3.1 -->
+  <rect x="80" y="1435" width="545" height="460" rx="10" fill="#ffffff" stroke="#14b8a6" stroke-width="2.5"/>
+  <text x="105" y="1475" fill="#0f766e" font-size="20" font-weight="800">STEP 3.1</text>
+  <text x="105" y="1505" fill="#0f172a" font-size="18" font-weight="700">Browser GPS Proximity Request</text>
+  <line x1="105" y1="1520" x2="600" y2="1520" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="105" y="1555" fill="#334155" font-size="15.5">• HTML5 navigator.geolocation captures GPS.</text>
+  <text x="105" y="1585" fill="#334155" font-size="15.5">• Dispatches /api/v1/parkings/nearby query.</text>
+  <text x="105" y="1615" fill="#334155" font-size="15.5">• Runs on any browser; 0 native app install.</text>
+
+  <!-- Step 3.2 -->
+  <rect x="665" y="1435" width="545" height="460" rx="10" fill="#ffffff" stroke="#14b8a6" stroke-width="2.5"/>
+  <text x="690" y="1475" fill="#0f766e" font-size="20" font-weight="800">STEP 3.2</text>
+  <text x="690" y="1505" fill="#0f172a" font-size="18" font-weight="700">SQL Haversine Spherical Query</text>
+  <line x1="690" y1="1520" x2="1185" y2="1520" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="690" y="1555" fill="#334155" font-size="15.5">• Calculates spherical distance in SQL.</text>
+  <text x="690" y="1585" fill="#334155" font-size="15.5">• Filters spots within 1km, 2km, or 5km.</text>
+  <text x="690" y="1615" fill="#334155" font-size="15.5">• Sub-second latency: &lt;250ms response.</text>
+
+  <!-- Step 3.3 -->
+  <rect x="1250" y="1435" width="545" height="460" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="1275" y="1475" fill="#1e40af" font-size="20" font-weight="800">STEP 3.3</text>
+  <text x="1275" y="1505" fill="#0f172a" font-size="18" font-weight="700">Clustered Map &amp; Feed Rendering</text>
+  <line x1="1275" y1="1520" x2="1770" y2="1520" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1275" y="1555" fill="#334155" font-size="15.5">• Leaflet.markercluster merges nearby pins.</text>
+  <text x="1275" y="1585" fill="#334155" font-size="15.5">• Clicking cluster expands slots cleanly.</text>
+  <text x="1275" y="1615" fill="#334155" font-size="15.5">• Split feed displays hourly &amp; daily rates.</text>
+
+  <!-- Step 3.4 -->
+  <rect x="1835" y="1435" width="555" height="460" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="1860" y="1475" fill="#b45309" font-size="20" font-weight="800">STEP 3.4</text>
+  <text x="1860" y="1505" fill="#0f172a" font-size="18" font-weight="700">ACID Lock &amp; Pass Generation</text>
+  <line x1="1860" y1="1520" x2="2365" y2="1520" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1860" y="1555" fill="#334155" font-size="15.5">• Database row-level lock prevents double-booking.</text>
+  <text x="1860" y="1585" fill="#334155" font-size="15.5">• 0% double-booking collision under load.</text>
+  <text x="1860" y="1615" fill="#334155" font-size="15.5">• Digital Pass generated with License Plate.</text>
+
+  <!-- FLOW 4 -->
+  <rect x="50" y="1950" width="2380" height="550" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="1950" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="1982" fill="#0f172a" font-size="21" font-weight="800">FLOW 4: GATE ARRIVAL, SECURITY GUARD VERIFICATION &amp; ENTRY CHECK-IN</text>
+
+  <!-- Step 4.1 -->
+  <rect x="80" y="2015" width="545" height="460" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="105" y="2055" fill="#1e40af" font-size="20" font-weight="800">STEP 4.1</text>
+  <text x="105" y="2085" fill="#0f172a" font-size="18" font-weight="700">One-Tap Navigation to Gate</text>
+  <line x1="105" y1="2100" x2="600" y2="2100" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="105" y="2135" fill="#334155" font-size="15.5">• Taps 'Navigate' on Digital Pass screen.</text>
+  <text x="105" y="2165" fill="#334155" font-size="15.5">• Triggers Google Maps external intent.</text>
+  <text x="105" y="2195" fill="#334155" font-size="15.5">• Guides driver directly to apartment gate.</text>
+
+  <!-- Step 4.2 -->
+  <rect x="665" y="2015" width="545" height="460" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="690" y="2055" fill="#6b21a8" font-size="20" font-weight="800">STEP 4.2</text>
+  <text x="690" y="2085" fill="#0f172a" font-size="18" font-weight="700">Arrival &amp; Guard Inspection</text>
+  <line x1="690" y1="2100" x2="1185" y2="2100" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="690" y="2135" fill="#334155" font-size="15.5">• Vehicle arrives at residential gate.</text>
+  <text x="690" y="2165" fill="#334155" font-size="15.5">• Driver displays Digital Pass on phone.</text>
+  <text x="690" y="2195" fill="#334155" font-size="15.5">• Guard visually matches license plate.</text>
+
+  <!-- Step 4.3 -->
+  <rect x="1250" y="2015" width="545" height="460" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="1275" y="2055" fill="#6b21a8" font-size="20" font-weight="800">STEP 4.3</text>
+  <text x="1275" y="2085" fill="#0f172a" font-size="18" font-weight="700">Optional Guard Web Lookup</text>
+  <line x1="1275" y1="2100" x2="1770" y2="2100" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1275" y="2135" fill="#334155" font-size="15.5">• Guard enters 6-digit code on web portal.</text>
+  <text x="1275" y="2165" fill="#334155" font-size="15.5">• Confirms validity and vehicle owner name.</text>
+  <text x="1275" y="2195" fill="#334155" font-size="15.5">• Opens gate barrier for safe parking.</text>
+
+  <!-- Step 4.4 -->
+  <rect x="1835" y="2015" width="555" height="460" rx="10" fill="#ffffff" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="1860" y="2055" fill="#15803d" font-size="20" font-weight="800">STEP 4.4</text>
+  <text x="1860" y="2085" fill="#0f172a" font-size="18" font-weight="700">Check-in Confirmation</text>
+  <line x1="1860" y1="2100" x2="2365" y2="2100" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1860" y="2135" fill="#334155" font-size="15.5">• Driver confirms check-in in app.</text>
+  <text x="1860" y="2165" fill="#334155" font-size="15.5">• State transitions to STATUS_CHECKED_IN.</text>
+  <text x="1860" y="2195" fill="#334155" font-size="15.5">• Active parking duration timer begins.</text>
+
+  <!-- FLOW 5 -->
+  <rect x="50" y="2530" width="2380" height="550" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="2530" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="2562" fill="#0f172a" font-size="21" font-weight="800">FLOW 5: AUTOMATED OVERSTAY MONITORING, EXIT CHECK-OUT &amp; REVENUE SETTLEMENT</text>
+
+  <!-- Step 5.1 -->
+  <rect x="80" y="2595" width="545" height="460" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="105" y="2635" fill="#dc2626" font-size="20" font-weight="800">STEP 5.1</text>
+  <text x="105" y="2665" fill="#0f172a" font-size="18" font-weight="700">Cron Overstay Poller</text>
+  <line x1="105" y1="2680" x2="600" y2="2680" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="105" y="2715" fill="#334155" font-size="15.5">• Spring @Scheduled runs every 5 minutes.</text>
+  <text x="105" y="2745" fill="#334155" font-size="15.5">• Detects overdue active reservations.</text>
+  <text x="105" y="2775" fill="#334155" font-size="15.5">• Flags OVERSTAY and calculates penalty.</text>
+
+  <!-- Step 5.2 -->
+  <rect x="665" y="2595" width="545" height="460" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="690" y="2635" fill="#b45309" font-size="20" font-weight="800">STEP 5.2</text>
+  <text x="690" y="2665" fill="#0f172a" font-size="18" font-weight="700">Exit Check-out &amp; Billing</text>
+  <line x1="690" y1="2680" x2="1185" y2="2680" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="690" y="2715" fill="#334155" font-size="15.5">• Driver returns and initiates checkout.</text>
+  <text x="690" y="2745" fill="#334155" font-size="15.5">• Calculates Base Fee + Overstay Surcharge.</text>
+  <text x="690" y="2775" fill="#334155" font-size="15.5">• Generates exit clearance pass.</text>
+
+  <!-- Step 5.3 -->
+  <rect x="1250" y="2595" width="545" height="460" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="1275" y="2635" fill="#6b21a8" font-size="20" font-weight="800">STEP 5.3</text>
+  <text x="1275" y="2665" fill="#0f172a" font-size="18" font-weight="700">Gate Exit &amp; Guard Clearance</text>
+  <line x1="1275" y1="2680" x2="1770" y2="2680" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1275" y="2715" fill="#334155" font-size="15.5">• Guard inspects exit pass at boundary gate.</text>
+  <text x="1275" y="2745" fill="#334155" font-size="15.5">• Gate barrier opens; vehicle exits safely.</text>
+  <text x="1275" y="2775" fill="#334155" font-size="15.5">• Slot is physically vacant for next driver.</text>
+
+  <!-- Step 5.4 -->
+  <rect x="1835" y="2595" width="555" height="460" rx="10" fill="#ffffff" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="1860" y="2635" fill="#15803d" font-size="20" font-weight="800">STEP 5.4</text>
+  <text x="1860" y="2665" fill="#0f172a" font-size="18" font-weight="700">Settlement &amp; Review</text>
+  <line x1="1860" y1="2680" x2="2365" y2="2680" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1860" y="2715" fill="#334155" font-size="15.5">• Booking marked STATUS_COMPLETED.</text>
+  <text x="1860" y="2745" fill="#334155" font-size="15.5">• Revenue credited to Host Ledger (৳3k-৳8k).</text>
+  <text x="1860" y="2775" fill="#334155" font-size="15.5">• Mutual 5-star ratings submitted.</text>
+
+  <!-- SUMMARY BOXES -->
+  <rect x="50" y="3110" width="2380" height="340" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="3110" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="3142" fill="#0f172a" font-size="21" font-weight="800">6. OPERATIONAL SUMMARY: ZERO-HARDWARE ADVANTAGE &amp; COMMUNITY SECURITY</text>
+
+  <rect x="80" y="3175" width="735" height="255" rx="10" fill="#ffffff" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="105" y="3210" fill="#15803d" font-size="20" font-weight="700">Pure Software-First Innovation</text>
+  <text x="105" y="3245" fill="#0f172a" font-size="16">• No ultrasonic sensors, boom barriers or RFID tags required</text>
+  <text x="105" y="3275" fill="#0f172a" font-size="16">• Runs on existing smartphones, browsers &amp; GPS hardware</text>
+  <text x="105" y="3305" fill="#475569" font-size="15">• Affordable for ordinary residential flat owner communities</text>
+
+  <rect x="872" y="3175" width="735" height="255" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="897" y="3210" fill="#1e40af" font-size="20" font-weight="700">Residential Building Security</text>
+  <text x="897" y="3245" fill="#0f172a" font-size="16">• Strict 3-Point Admin KYC vetting eliminates fraud</text>
+  <text x="897" y="3275" fill="#0f172a" font-size="16">• License Plate on Digital Pass gives guards 100% control</text>
+  <text x="897" y="3305" fill="#475569" font-size="15">• Unregistered outside vehicles cannot enter compound</text>
+
+  <rect x="1665" y="3175" width="735" height="255" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="1690" y="3210" fill="#b45309" font-size="20" font-weight="700">Concurrency &amp; Reliability</text>
+  <text x="1690" y="3245" fill="#0f172a" font-size="16">• ACID row locks guarantee 0% double-booking collision</text>
+  <text x="1690" y="3275" fill="#0f172a" font-size="16">• Spring Boot @Scheduled cron manages overstay automatically</text>
+  <text x="1690" y="3305" fill="#475569" font-size="15">• Sub-second search across Dhanmondi, Banani &amp; Mirpur</text>
+</svg>

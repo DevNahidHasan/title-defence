@@ -1,0 +1,275 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2480 3508" width="2480" height="3508" style="background:#ffffff; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <filter id="cardShadow" x="-2%" y="-2%" width="104%" height="106%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.07"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- HEADER -->
+  <rect x="50" y="50" width="2380" height="150" rx="14" fill="url(#headerGrad)"/>
+  <text x="85" y="105" fill="#ffffff" font-size="34" font-weight="800">NIRAPOD PARKING — DISTRIBUTED MICROSERVICES ARCHITECTURE</text>
+  <text x="85" y="145" fill="#93c5fd" font-size="20" font-weight="500">Full A4 Blueprint: Java 25 | Spring Boot 4.x | Angular 19 (Signals &amp; SCSS) | Keycloak OAuth2 | Strict Database-per-Service (MySQL)</text>
+  
+  <!-- BADGES -->
+  <g transform="translate(85, 165)">
+    <rect x="0" y="0" width="180" height="26" rx="6" fill="#dbeafe" stroke="#1e40af" stroke-width="1.2"/>
+    <text x="12" y="18" fill="#1e40af" font-size="12" font-weight="700">HIGH CONCURRENCY</text>
+    <rect x="195" y="0" width="215" height="26" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.2"/>
+    <text x="207" y="18" fill="#15803d" font-size="12" font-weight="700">ZERO HARDWARE (NO IOT)</text>
+    <rect x="425" y="0" width="200" height="26" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="1.2"/>
+    <text x="437" y="18" fill="#b45309" font-size="12" font-weight="700">DATABASE ISOLATION</text>
+    <rect x="640" y="0" width="170" height="26" rx="6" fill="#f3e8ff" stroke="#6b21a8" stroke-width="1.2"/>
+    <text x="652" y="18" fill="#6b21a8" font-size="12" font-weight="700">KEYCLOAK RBAC</text>
+    <rect x="825" y="0" width="220" height="26" rx="6" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.2"/>
+    <text x="837" y="18" fill="#0f766e" font-size="12" font-weight="700">SQL HAVERSINE SEARCH</text>
+  </g>
+
+  <!-- 1. PRESENTATION LAYER -->
+  <rect x="50" y="230" width="2380" height="530" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="230" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="262" fill="#0f172a" font-size="21" font-weight="800">1. CLIENT PRESENTATION LAYER — ANGULAR 19 (STANDALONE COMPONENTS, SIGNALS STATE, SCSS)</text>
+
+  <!-- Card 1A -->
+  <rect x="80" y="295" width="735" height="440" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="105" y="335" fill="#1e40af" font-size="22" font-weight="700">Vehicle Owner View (Car &amp; Motorbike)</text>
+  <text x="105" y="375" fill="#0f172a" font-size="18" font-weight="700">• Split-View: Clustered Map + Card Feed</text>
+  <text x="105" y="405" fill="#475569" font-size="16">  Interactive Leaflet.js with dynamic tile rendering</text>
+  <text x="105" y="440" fill="#0f172a" font-size="18" font-weight="700">• GPS Proximity (navigator.geolocation)</text>
+  <text x="105" y="470" fill="#475569" font-size="16">  1km / 2km / 5km radius filtering with zero latency</text>
+  <text x="105" y="505" fill="#0f172a" font-size="18" font-weight="700">• Vehicle Selector &amp; Duration Filter</text>
+  <text x="105" y="535" fill="#475569" font-size="16">  Hourly, Daily, Overnight &amp; Monthly rental plans</text>
+  <text x="105" y="570" fill="#0f172a" font-size="18" font-weight="700">• Digital Pass &amp; Turn-by-Turn Navigation</text>
+  <text x="105" y="600" fill="#475569" font-size="16">  One-tap handoff to Google Maps external intent</text>
+  <rect x="105" y="680" width="310" height="36" rx="6" fill="#eff6ff" stroke="#1e40af" stroke-width="1.2"/>
+  <text x="120" y="704" fill="#1e40af" font-size="15" font-weight="700">PORT: 4200 (DEV) / 80 (PROD)</text>
+
+  <!-- Card 1B -->
+  <rect x="872" y="295" width="735" height="440" rx="10" fill="#ffffff" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="897" y="335" fill="#15803d" font-size="22" font-weight="700">Parking Spot Owner (Host) View</text>
+  <text x="897" y="375" fill="#0f172a" font-size="18" font-weight="700">• Multi-Step Garage Listing Wizard</text>
+  <text x="897" y="405" fill="#475569" font-size="16">  Address, GPS pin placement, slot dimensions, rules</text>
+  <text x="897" y="440" fill="#0f172a" font-size="18" font-weight="700">• 3-Point KYC Document Uploader</text>
+  <text x="897" y="470" fill="#475569" font-size="16">  Front/back NID, flat allotment slip &amp; garage photos</text>
+  <text x="897" y="505" fill="#0f172a" font-size="18" font-weight="700">• Flexible Rate &amp; Schedule Matrix</text>
+  <text x="897" y="535" fill="#475569" font-size="16">  Configurable hourly, daily, overnight &amp; monthly rates</text>
+  <text x="897" y="570" fill="#0f172a" font-size="18" font-weight="700">• Passive Income Ledger Dashboard</text>
+  <text x="897" y="600" fill="#475569" font-size="16">  Target monthly earnings: ৳3,000 to ৳8,000 per slot</text>
+  <rect x="897" y="680" width="280" height="36" rx="6" fill="#f0fdf4" stroke="#15803d" stroke-width="1.2"/>
+  <text x="912" y="704" fill="#15803d" font-size="15" font-weight="700">ROLE: ROLE_SPOT_OWNER</text>
+
+  <!-- Card 1C -->
+  <rect x="1665" y="295" width="735" height="440" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="1690" y="335" fill="#b45309" font-size="22" font-weight="700">Admin Portal &amp; Security Guard Interface</text>
+  <text x="1690" y="375" fill="#0f172a" font-size="18" font-weight="700">• 3-Point KYC Verification Workbench</text>
+  <text x="1690" y="405" fill="#475569" font-size="16">  Admin document audit, one-click approve/reject/resubmit</text>
+  <text x="1690" y="440" fill="#0f172a" font-size="18" font-weight="700">• Security Guard Fast Gate-Check View</text>
+  <text x="1690" y="470" fill="#475569" font-size="16">  Digital pass lookup by license plate (Zero guard barrier)</text>
+  <text x="1690" y="505" fill="#0f172a" font-size="18" font-weight="700">• Overstay Alert &amp; Dispute Management</text>
+  <text x="1690" y="535" fill="#475569" font-size="16">  Automated flag on vehicles exceeding reserved hours</text>
+  <text x="1690" y="570" fill="#0f172a" font-size="18" font-weight="700">• Platform-Wide Audit Trail</text>
+  <text x="1690" y="600" fill="#475569" font-size="16">  Immutable logging of state changes &amp; financial records</text>
+  <rect x="1690" y="680" width="340" height="36" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="1.2"/>
+  <text x="1705" y="704" fill="#b45309" font-size="15" font-weight="700">ROLES: ROLE_ADMIN / ROLE_GUARD</text>
+
+  <!-- 2. EDGE GATEWAY & IDENTITY -->
+  <rect x="50" y="800" width="2380" height="620" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="800" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="832" fill="#0f172a" font-size="21" font-weight="800">2. EDGE ROUTING, RATE LIMITING &amp; IDENTITY INFRASTRUCTURE</text>
+
+  <!-- 2A -->
+  <rect x="80" y="865" width="1110" height="530" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="110" y="905" fill="#1e40af" font-size="22" font-weight="700">Spring Cloud Gateway (Edge API Gateway - Port 8080)</text>
+  <text x="110" y="945" fill="#0f172a" font-size="18" font-weight="700">• Centralized Single Point of Entry for All Client Requests</text>
+  <text x="110" y="975" fill="#475569" font-size="16">  No internal microservices exposed directly to the public internet</text>
+  <text x="110" y="1010" fill="#0f172a" font-size="18" font-weight="700">• Centralized RS256 JWT Token Validation Filter</text>
+  <text x="110" y="1040" fill="#475569" font-size="16">  Validates Keycloak signatures, parses claims, strips unauthenticated calls</text>
+  <text x="110" y="1075" fill="#0f172a" font-size="18" font-weight="700">• Dynamic URI Route Predicates:</text>
+  <text x="130" y="1105" fill="#334155" font-size="16">  - /api/v1/auth/**    -> Proxied to Keycloak Identity Server (:8180)</text>
+  <text x="130" y="1135" fill="#334155" font-size="16">  - /api/v1/users/**   -> Routed via Eureka to User &amp; KYC Service (:8081)</text>
+  <text x="130" y="1165" fill="#334155" font-size="16">  - /api/v1/parkings/**-> Routed via Eureka to Parking Spot Service (:8082)</text>
+  <text x="130" y="1195" fill="#334155" font-size="16">  - /api/v1/bookings/**-> Routed via Eureka to Booking Service (:8083)</text>
+  <text x="110" y="1235" fill="#0f172a" font-size="18" font-weight="700">• Token Bucket Rate Limiting (DDoS &amp; Coordinate Scraping Defense)</text>
+  <rect x="110" y="1340" width="480" height="36" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="125" y="1364" fill="#2563eb" font-size="15" font-weight="700">SPRING CLOUD GATEWAY | PORT: 8080 | NETTY</text>
+
+  <!-- 2B -->
+  <rect x="1230" y="865" width="1170" height="530" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="1260" y="905" fill="#6b21a8" font-size="22" font-weight="700">Keycloak Identity &amp; Access Management (Port 8180)</text>
+  <text x="1260" y="945" fill="#0f172a" font-size="18" font-weight="700">• OAuth 2.0 &amp; OpenID Connect (OIDC) Standard Compliance</text>
+  <text x="1260" y="975" fill="#475569" font-size="16">  Industry-standard token issuance, claims generation, and refresh lifecycle</text>
+  <text x="1260" y="1010" fill="#0f172a" font-size="18" font-weight="700">• Asymmetric Cryptographic JWT Signing (RS256)</text>
+  <text x="1260" y="1040" fill="#475569" font-size="16">  Signed with Keycloak private key; verified across Gateway using public key</text>
+  <text x="1260" y="1075" fill="#0f172a" font-size="18" font-weight="700">• Unified Dual-Role User Model (One login for drivers &amp; hosts)</text>
+  <text x="1260" y="1105" fill="#475569" font-size="16">  Single user identity holds both ROLE_VEHICLE_OWNER &amp; ROLE_SPOT_OWNER</text>
+  <text x="1260" y="1140" fill="#0f172a" font-size="18" font-weight="700">• Role Hierarchy: ROLE_VEHICLE_OWNER, ROLE_SPOT_OWNER, ROLE_ADMIN, ROLE_GUARD</text>
+  <text x="1260" y="1175" fill="#0f172a" font-size="18" font-weight="700">• Dedicated Persistence Schema: keycloak_db (MySQL 8.x)</text>
+  <rect x="1260" y="1340" width="450" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.2"/>
+  <text x="1275" y="1364" fill="#6b21a8" font-size="15" font-weight="700">KEYCLOAK IAM | PORT: 8180 | RS256 OIDC TOKENS</text>
+
+  <!-- 3. SERVICE DISCOVERY & COMMUNICATION BUS -->
+  <rect x="50" y="1460" width="2380" height="250" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="1460" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="1492" fill="#0f172a" font-size="21" font-weight="800">3. SERVICE REGISTRATION &amp; DECLARATIVE INTER-SERVICE RPC BUS</text>
+
+  <rect x="80" y="1520" width="1110" height="170" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="110" y="1555" fill="#1e40af" font-size="21" font-weight="700">Netflix Eureka Discovery Server (Port 8761)</text>
+  <text x="110" y="1590" fill="#0f172a" font-size="17">• Dynamic Registry: Automatic 30-second heartbeat health monitoring</text>
+  <text x="110" y="1620" fill="#0f172a" font-size="17">• Zero Hardcoded IPs: Microservices communicate via logical service IDs</text>
+  <text x="110" y="1650" fill="#475569" font-size="16">• Fault-tolerant registry with auto-eviction of unhealthy service instances</text>
+
+  <rect x="1230" y="1520" width="1170" height="170" rx="10" fill="#ffffff" stroke="#14b8a6" stroke-width="2.5"/>
+  <text x="1260" y="1555" fill="#0f766e" font-size="21" font-weight="700">Spring Cloud OpenFeign (Declarative Inter-Service RPC)</text>
+  <text x="1260" y="1590" fill="#0f172a" font-size="17">• Synchronous Declarative REST Clients with Resilience4j Circuit Breakers</text>
+  <text x="1260" y="1620" fill="#0f172a" font-size="17">• Booking-Service -> User-Service (Validate KYC status &amp; vehicle registration)</text>
+  <text x="1260" y="1650" fill="#475569" font-size="16">• Booking-Service -> Parking-Service (Query slot availability &amp; trigger locking)</text>
+
+  <!-- 4. CORE MICROSERVICES TIER -->
+  <rect x="50" y="1750" width="2380" height="760" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="1750" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="1782" fill="#0f172a" font-size="21" font-weight="800">4. APPLICATION BUSINESS LOGIC TIER — SPRING BOOT 4.X MICROSERVICES (JAVA 25)</text>
+
+  <!-- 4A -->
+  <rect x="80" y="1815" width="735" height="670" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="105" y="1855" fill="#1e40af" font-size="22" font-weight="700">User &amp; KYC Service (Port 8081)</text>
+  <text x="105" y="1895" fill="#0f172a" font-size="18" font-weight="700">• User Profile Management</text>
+  <text x="105" y="1925" fill="#475569" font-size="16">  Full name, phone, emergency contact, role state</text>
+  <text x="105" y="1960" fill="#0f172a" font-size="18" font-weight="700">• Vehicle Profile Registry</text>
+  <text x="105" y="1990" fill="#475569" font-size="16">  Vehicle category (Car/Bike), license plate, model</text>
+  <text x="105" y="2025" fill="#0f172a" font-size="18" font-weight="700">• 3-Point Document Storage</text>
+  <text x="105" y="2055" fill="#475569" font-size="16">  Encrypted multipart upload: NID, Tax Slip, Photos</text>
+  <text x="105" y="2090" fill="#0f172a" font-size="18" font-weight="700">• KYC Verification State Machine</text>
+  <text x="105" y="2120" fill="#1e40af" font-size="16" font-weight="700">  PENDING -> UNDER_REVIEW -> VERIFIED / REJECTED</text>
+  <text x="105" y="2155" fill="#0f172a" font-size="18" font-weight="700">• OpenFeign Provider for User Details</text>
+  <text x="105" y="2185" fill="#475569" font-size="16">  Exposes internal endpoints for booking validations</text>
+  <rect x="105" y="2425" width="450" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="120" y="2449" fill="#1e40af" font-size="15" font-weight="700">SPRING BOOT 4.X | PORT: 8081 | JPA / HIKARI</text>
+
+  <!-- 4B -->
+  <rect x="872" y="1815" width="735" height="670" rx="10" fill="#ffffff" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="897" y="1855" fill="#15803d" font-size="22" font-weight="700">Parking Spot Service (Port 8082)</text>
+  <text x="897" y="1895" fill="#0f172a" font-size="18" font-weight="700">• Garage Space Metadata Management</text>
+  <text x="897" y="1925" fill="#475569" font-size="16">  Address, dimensions, security guard, covered/open</text>
+  <text x="897" y="1960" fill="#0f172a" font-size="18" font-weight="700">• SQL Haversine Proximity Search</text>
+  <text x="897" y="1990" fill="#15803d" font-size="16" font-weight="700">  acos(sin(lat1)*sin(lat2)+cos(lat1)*cos(lat2)*cos(dLng))</text>
+  <text x="897" y="2020" fill="#475569" font-size="16">  Sub-second spherical search across 1km, 2km, 5km</text>
+  <text x="897" y="2055" fill="#0f172a" font-size="18" font-weight="700">• Dynamic Pricing Schedule Matrix</text>
+  <text x="897" y="2085" fill="#475569" font-size="16">  Hourly, Daily, Overnight &amp; Monthly rates for Car/Bike</text>
+  <text x="897" y="2120" fill="#0f172a" font-size="18" font-weight="700">• Spot Availability &amp; Status Governance</text>
+  <text x="897" y="2150" fill="#475569" font-size="16">  ACTIVE, INACTIVE, OCCUPIED, MAINTENANCE</text>
+  <rect x="897" y="2425" width="440" height="36" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="912" y="2449" fill="#15803d" font-size="15" font-weight="700">SPRING BOOT 4.X | PORT: 8082 | SPATIAL SQL</text>
+
+  <!-- 4C -->
+  <rect x="1665" y="1815" width="735" height="670" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="1690" y="1855" fill="#b45309" font-size="22" font-weight="700">Booking &amp; Reservation Service (Port 8083)</text>
+  <text x="1690" y="1895" fill="#0f172a" font-size="18" font-weight="700">• ACID Transactional Concurrency Control</text>
+  <text x="1690" y="1925" fill="#b45309" font-size="16" font-weight="700">  Row-level pessimistic locking eliminates collisions (0%)</text>
+  <text x="1690" y="1960" fill="#0f172a" font-size="18" font-weight="700">• Booking Lifecycle State Machine</text>
+  <text x="1690" y="1990" fill="#475569" font-size="16">  INITIATED -> RESERVED -> CHECKED_IN -> COMPLETED</text>
+  <text x="1690" y="2025" fill="#0f172a" font-size="18" font-weight="700">• Digital Pass Generation Engine</text>
+  <text x="1690" y="2055" fill="#475569" font-size="16">  Generates verification token, spot ID &amp; license plate</text>
+  <text x="1690" y="2090" fill="#0f172a" font-size="18" font-weight="700">• Automated Overstay Cron Poller</text>
+  <text x="1690" y="2120" fill="#475569" font-size="16">  @Scheduled runs every 5 min; detects overdue vehicles</text>
+  <rect x="1690" y="2425" width="440" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="1705" y="2449" fill="#b45309" font-size="15" font-weight="700">SPRING BOOT 4.X | PORT: 8083 | SCHEDULER</text>
+
+  <!-- 5. DATABASE TIER -->
+  <rect x="50" y="2550" width="2380" height="420" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="2550" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="2582" fill="#0f172a" font-size="21" font-weight="800">5. PERSISTENCE TIER — STRICT DATABASE-PER-SERVICE ISOLATION (MYSQL 8.X)</text>
+
+  <!-- DB 1 -->
+  <rect x="80" y="2615" width="530" height="330" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="105" y="2650" fill="#1e40af" font-size="20" font-weight="700">user_db (MySQL 8.x)</text>
+  <text x="105" y="2685" fill="#0f172a" font-size="16" font-weight="700">• Managed by: User-Service</text>
+  <text x="105" y="2715" fill="#475569" font-size="15">• Exclusive credentials &amp; connection pool</text>
+  <text x="105" y="2750" fill="#0f172a" font-size="16" font-weight="700">• Core Entities &amp; Tables:</text>
+  <text x="105" y="2778" fill="#475569" font-size="14">  - users (id, phone, name, email)</text>
+  <text x="105" y="2806" fill="#475569" font-size="14">  - vehicles (id, user_id, plate, type)</text>
+  <text x="105" y="2834" fill="#475569" font-size="14">  - kyc_documents (id, nid_url, bill_url)</text>
+  <rect x="105" y="2895" width="220" height="32" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="120" y="2917" fill="#1e40af" font-size="13" font-weight="700">PORT: 3306 | USER_DB</text>
+
+  <!-- DB 2 -->
+  <rect x="670" y="2615" width="530" height="330" rx="10" fill="#ffffff" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="695" y="2650" fill="#15803d" font-size="20" font-weight="700">parking_db (MySQL 8.x)</text>
+  <text x="695" y="2685" fill="#0f172a" font-size="16" font-weight="700">• Managed by: Parking-Service</text>
+  <text x="695" y="2715" fill="#475569" font-size="15">• Spatial Lat/Lng Indices Enabled</text>
+  <text x="695" y="2750" fill="#0f172a" font-size="16" font-weight="700">• Core Entities &amp; Tables:</text>
+  <text x="695" y="2778" fill="#475569" font-size="14">  - parking_spots (id, host_id, lat, lng)</text>
+  <text x="695" y="2806" fill="#475569" font-size="14">  - pricing_matrix (id, hourly, daily, mo)</text>
+  <text x="695" y="2834" fill="#475569" font-size="14">  - spot_amenities (cctv, guard, cover)</text>
+  <rect x="695" y="2895" width="240" height="32" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="710" y="2917" fill="#15803d" font-size="13" font-weight="700">PORT: 3306 | PARKING_DB</text>
+
+  <!-- DB 3 -->
+  <rect x="1260" y="2615" width="530" height="330" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="1285" y="2650" fill="#b45309" font-size="20" font-weight="700">booking_db (MySQL 8.x)</text>
+  <text x="1285" y="2685" fill="#0f172a" font-size="16" font-weight="700">• Managed by: Booking-Service</text>
+  <text x="1285" y="2715" fill="#475569" font-size="15">• InnoDB ACID Row Locks</text>
+  <text x="1285" y="2750" fill="#0f172a" font-size="16" font-weight="700">• Core Entities &amp; Tables:</text>
+  <text x="1285" y="2778" fill="#475569" font-size="14">  - bookings (id, spot_id, user_id, time)</text>
+  <text x="1285" y="2806" fill="#475569" font-size="14">  - digital_passes (id, pass_code, plate)</text>
+  <text x="1285" y="2834" fill="#475569" font-size="14">  - revenue_ledger (id, host_share, fee)</text>
+  <rect x="1285" y="2895" width="240" height="32" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="1300" y="2917" fill="#b45309" font-size="13" font-weight="700">PORT: 3306 | BOOKING_DB</text>
+
+  <!-- DB 4 -->
+  <rect x="1850" y="2615" width="550" height="330" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="1875" y="2650" fill="#6b21a8" font-size="20" font-weight="700">keycloak_db (MySQL 8.x)</text>
+  <text x="1875" y="2685" fill="#0f172a" font-size="16" font-weight="700">• Managed by: Keycloak IAM</text>
+  <text x="1875" y="2715" fill="#475569" font-size="15">• Asymmetric Key Store (RS256)</text>
+  <text x="1875" y="2750" fill="#0f172a" font-size="16" font-weight="700">• Core Entities &amp; Tables:</text>
+  <text x="1875" y="2778" fill="#475569" font-size="14">  - user_entity (realm_id, username)</text>
+  <text x="1875" y="2806" fill="#475569" font-size="14">  - credential (password_hash, salt)</text>
+  <text x="1875" y="2834" fill="#475569" font-size="14">  - user_role_mapping (user_id, role_id)</text>
+  <rect x="1875" y="2895" width="250" height="32" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.2"/>
+  <text x="1890" y="2917" fill="#6b21a8" font-size="13" font-weight="700">PORT: 3306 | KEYCLOAK_DB</text>
+
+  <!-- 6. EXTERNAL INTEGRATIONS & SPEC -->
+  <rect x="50" y="2990" width="2380" height="460" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="50" y="2990" width="2380" height="48" rx="14" fill="#e2e8f0"/>
+  <text x="80" y="3022" fill="#0f172a" font-size="21" font-weight="800">6. EXTERNAL INTEGRATIONS, PRODUCTION DEPLOYMENT &amp; ARCHITECTURE SPECIFICATION</text>
+
+  <rect x="80" y="3055" width="735" height="375" rx="10" fill="#ffffff" stroke="#14b8a6" stroke-width="2.5"/>
+  <text x="105" y="3095" fill="#0f766e" font-size="21" font-weight="700">External Services &amp; APIs</text>
+  <text x="105" y="3130" fill="#0f172a" font-size="17" font-weight="700">• OpenStreetMap Tile CDN Server</text>
+  <text x="105" y="3158" fill="#475569" font-size="15">  Zero-cost mapping tiles rendered via Leaflet</text>
+  <text x="105" y="3190" fill="#0f172a" font-size="17" font-weight="700">• HTML5 Geolocation API (Browser GPS)</text>
+  <text x="105" y="3218" fill="#475569" font-size="15">  Captures user coordinate with zero app install</text>
+  <text x="105" y="3250" fill="#0f172a" font-size="17" font-weight="700">• Google Maps External Intent</text>
+  <text x="105" y="3278" fill="#475569" font-size="15">  One-click turn-by-turn driving handoff</text>
+  <rect x="105" y="3375" width="360" height="36" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+  <text x="120" y="3399" fill="#0f766e" font-size="14" font-weight="700">ZERO IOT HARDWARE DEPENDENCY</text>
+
+  <rect x="872" y="3055" width="735" height="375" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="897" y="3095" fill="#1e40af" font-size="21" font-weight="700">Production Standards &amp; Security</text>
+  <text x="897" y="3130" fill="#0f172a" font-size="17" font-weight="700">• Database-per-Service Paradigm</text>
+  <text x="897" y="3158" fill="#475569" font-size="15">  Zero foreign keys across microservice schemas</text>
+  <text x="897" y="3190" fill="#0f172a" font-size="17" font-weight="700">• Asymmetric Cryptography (RS256 JWT)</text>
+  <text x="897" y="3218" fill="#475569" font-size="15">  Stateless verification across Edge Gateway</text>
+  <text x="897" y="3250" fill="#0f172a" font-size="17" font-weight="700">• Schedulers &amp; Docker Containers</text>
+  <text x="897" y="3278" fill="#475569" font-size="15">  Isolated containerization for all services &amp; DBs</text>
+  <rect x="897" y="3375" width="340" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="912" y="3399" fill="#1e40af" font-size="14" font-weight="700">ACID COMPLIANT TRANSACTIONS</text>
+
+  <rect x="1665" y="3055" width="735" height="375" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="1690" y="3095" fill="#6b21a8" font-size="21" font-weight="700">Data Flow Types &amp; Legend</text>
+  <circle cx="1705" cy="3140" r="8" fill="#2563eb"/>
+  <text x="1725" y="3146" fill="#0f172a" font-size="17" font-weight="700">HTTPS REST / JSON Client Request Flow</text>
+  <circle cx="1705" cy="3180" r="8" fill="#a855f7"/>
+  <text x="1725" y="3186" fill="#0f172a" font-size="17" font-weight="700">RS256 JWT OAuth2 Authentication Flow</text>
+  <circle cx="1705" cy="3220" r="8" fill="#14b8a6"/>
+  <text x="1725" y="3226" fill="#0f172a" font-size="17" font-weight="700">Declarative Feign RPC Inter-Service Bus</text>
+  <circle cx="1705" cy="3260" r="8" fill="#22c55e"/>
+  <text x="1725" y="3266" fill="#0f172a" font-size="17" font-weight="700">Dedicated JDBC HikariCP Database Connection</text>
+  <circle cx="1705" cy="3300" r="8" fill="#f59e0b"/>
+  <text x="1725" y="3306" fill="#0f172a" font-size="17" font-weight="700">Scheduled Background Polling &amp; Worker</text>
+</svg>
