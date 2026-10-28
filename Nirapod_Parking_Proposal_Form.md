@@ -1,8 +1,8 @@
 # Nirapod Parking: FYDP Proposal Approval Form (Section V)
 
-**Course Code:** CSE499 | **Course Title:** Final Year Design Project (Title Defense)  
-**Institution:** Daffodil International University (DIU), Department of Computer Science & Engineering  
-**Proposed Title:** Nirapod Parking: A Community-Driven Residential Parking Marketplace Using Java Spring Cloud Microservices, Angular, Keycloak OAuth2, and Geospatial Proximity Indexing  
+**Course Code:** CSE499 | **Course Title:** Final Year Design Project (Title Defense)
+**Institution:** Daffodil International University (DIU), Department of Computer Science & Engineering
+**Proposed Title:** Nirapod Parking - A Microservice-Based Web Platform for Sharing Residential Parking Spaces in Urban Areas
 
 ---
 
@@ -40,65 +40,69 @@ Third, in Bangladesh, platforms like Pathao, Uber, and Jatri successfully modern
 
 # 4. Gap Analysis
 
-Although previous academic papers and commercial apps have addressed parking, they break down when applied to the realities of crowded residential neighborhoods in Bangladesh. Our analysis identifies four critical practical and technical barriers:
+While international commercial platforms like JustPark (UK) and SpotHero (USA) have popularized peer-to-peer parking sharing in Western countries, they fail when applied to the realities of Bangladesh. Furthermore, academic research papers have primarily focused on expensive IoT hardware that is impractical for ordinary residential buildings. Our analysis identifies five realistic practical gaps:
 
-1. **The Hardware and Cost Barrier:** Academic smart parking models require dedicated physical sensors, electrical wiring, and automated boom barriers at every parking bay. Installing and maintaining costly hardware across private residential apartment buildings in Dhaka is financially unrealistic for ordinary flat owners.
-2. **The Building Structure and Trust Barrier:** International apps like JustPark assume open, single-family driveways. In Dhaka, residential buildings have locked gates, and multiple flat owners share the same garage. Letting unverified strangers into the building creates serious security concerns for residents. Existing foreign apps and local paper signs provide zero background verification.
-3. **The Gate Usability Barrier:** Smart city research papers assume automated electronic barrier gates. In Bangladesh, building entry is managed by human **Security Guards** (Darwans). Systems that require guards to use complex smartphone apps or scan digital codes fail in practice due to usability and technical friction.
-4. **The UI/UX Map Collision Barrier:** In multi-story Dhaka buildings where three or four different flat owners list their parking spots, standard map applications drop multiple marker pins at the exact same GPS coordinate. This causes pins to overlap, creating visual clutter that makes individual spots impossible for **Vehicle Owners** to click or select.
+1. **The Expensive Hardware & Maintenance Gap (Academic IoT Papers):** Most academic research papers suggest installing ultrasonic ground sensors, surveillance cameras, and automated barrier gates connected to microcontrollers like Arduino or Raspberry Pi. In real life, who will pay ৳50,000 to ৳100,000 to install and maintain sensors and wiring in an ordinary residential garage just for a few parking bays? Flat owners will not spend that money, and hardware easily breaks down from dust, rain, and power cuts. Nirapod Parking requires zero physical hardware or sensors—the entire system runs through standard web browsers and phones using device GPS and SQL distance math.
+2. **The Open Driveway vs. Locked Compound Gap (JustPark & SpotHero):** In the UK or USA, JustPark and SpotHero work because Western homes are single-family houses with open personal driveways right in front of the lawn. A driver simply pulls in from the street without opening any gate or talking to anyone. In Dhaka, we do not have open private driveways. Almost all parking is located inside the ground floor or basement of multi-story apartment buildings behind locked boundary gates. Foreign apps have no workflow to handle gated, multi-family apartment buildings.
+3. **The Security Guard (Darwan) Usability Gap:** Smart city research papers assume automated electronic gates, and Western apps assume no human interaction is needed. In Bangladesh, building entry is strictly managed by human Security Guards (Darwans). Most guards are elderly, not tech-savvy, and many do not carry smartphones. Expecting a guard to download a mobile app, scan complex QR codes, or manage software will fail in real life. Nirapod Parking solves this by showing the vehicle’s license plate number in big, bold text on the driver’s phone screen. The guard only has to take a quick 3-second visual check of the car or bike plate before opening the gate manually.
+4. **The Building Trust & Shared Safety Gap (JustPark & SpotHero):** On JustPark, anyone can sign up with an address because if something goes wrong, it only affects their own private front yard. But in a Dhaka apartment building, 10 to 30 families live in the same building. If an unverified stranger drives inside the compound, other flat owners immediately worry about vehicle theft, children playing downstairs, and home security. Furthermore, how do we know the person renting the spot actually owns that flat? To solve this, Nirapod Parking requires a mandatory 3-point KYC check (National ID card, flat allotment slip or utility bill, and garage photos), which is verified by an Admin before any listing is published.
+5. **The Motorcycle Reality & Map Pin Stacking Gap:** Western apps like JustPark and SpotHero are built almost entirely for cars. But in Dhaka, more than half of daily commuters ride motorcycles. A single car parking bay can easily accommodate 4 or 5 motorbikes. If a system only allows full car rentals, motorbikes are left on the street. In addition, when 2 or 3 flat owners in the same apartment building list their empty parking spots on a map, standard apps drop multiple pins at the exact same GPS coordinate, making them stack on top of each other and impossible to tap. Nirapod Parking solves both problems by letting hosts list flexible slots for cars and motorcycles, and using Leaflet marker clustering to bundle spots in the same building into one clean, clickable pin that expands smoothly.
 
-Nirapod Parking overcomes these barriers through a software-first approach tailored to local needs. The platform operates entirely through standard web browsers using device GPS and SQL distance formulas, completely eliminating the need for expensive physical sensors or barrier gates. To establish trust and maintain building security, an **Admin** reviews the **Parking Spot Owner's** National ID, flat allotment or tax slip, and a clear photo of the parking slot before any listing is published. Furthermore, when a booking is confirmed, the system generates a digital pass showing the vehicle's license plate number so that the building's **Security Guard** can verify incoming cars and motorbikes with a quick visual check at the gate, without needing a smartphone or app. On the user interface, Leaflet marker clustering groups multiple spots in the same building into a single clean pin that smoothly expands when clicked, while our flexible booking engine supports hourly, daily, overnight, and monthly reservations for both cars and motorcycles.
-
-Through this combination of features, the project directly addresses the **disconnection between chaotic street parking and thousands of idle residential garage spaces across Dhaka and Chattogram**. By providing a verified, low-cost digital bridge between Vehicle Owners and residential flat owners, it eliminates street parking dangers (vehicle damage, parts theft, and police towing fines) and road congestion, while allowing flat owners to earn steady supplemental income from empty garage spaces.
+Through this combination of software-first features, Nirapod Parking directly bridges the gap between chaotic street parking and thousands of idle residential garage spaces across Dhaka and Chattogram. It eliminates street parking dangers (vehicle damage, parts theft, and police towing fines) and road congestion, while allowing residential flat owners to earn steady supplemental income (estimated at ৳3,000 to ৳8,000 per month) from empty garage spaces.
 
 ---
 
 # 5. Methodology
 
-**Overview & Approach:**  
-We will execute this project using an Agile incremental development methodology divided into three clear development stages:  
-* **Stage 1 (Core MVP):** Setting up the distributed microservices backend infrastructure, centralized user authentication, and basic spot listing and reservation workflows.  
-* **Stage 2 (Map Search & Security):** Integrating an interactive Leaflet map with marker clustering, GPS proximity search, and the Admin KYC verification portal.  
-* **Stage 3 (Testing & Evaluation):** Conducting performance benchmarking, concurrency load tests to prevent double-booking, and refining responsive UI styling.  
+**Overview & Approach:**We will execute this project using an Agile incremental development methodology divided into three clear development stages:
+
+- **Stage 1 (Core MVP):** Setting up the distributed microservices backend infrastructure, centralized user authentication, and basic spot listing and reservation workflows.
+- **Stage 2 (Map Search & Security):** Integrating an interactive Leaflet map with marker clustering, GPS proximity search, and the Admin KYC verification portal.
+- **Stage 3 (Testing & Evaluation):** Conducting performance benchmarking, concurrency load tests to prevent double-booking, and refining responsive UI styling.
 
 By structuring the backend into independent microservices, each service can be developed, tested, and scaled on its own without affecting the rest of the application.
 
 ---
 
 ### Techniques & Tools (Technical Stack)
-* **Backend & Microservices:**
-  - **Java 25 & Spring Boot 4.x:** Core backend framework for developing lightweight, high-performance REST microservices.
-  - **API Gateway:** Acts as the single entry point for all frontend requests, handling request routing, rate limiting, and security token validation.
-  - **Discovery Server:** Automatically registers and tracks the network locations of all active microservices so they can communicate dynamically.
-  - **Declarative REST Clients:** Enables clean, type-safe inter-service communication between backend services.
-* **Database & Persistence:**
-  - **MySQL 8.x:** Relational database management system with strict **Database-per-Service isolation** (`user_db`, `parking_db`, `booking_db`, and `keycloak_db`). No service can directly query another service's database.
-  - **Spring Data JPA & Hibernate:** Simplifies database transactions and data mapping.
-* **Identity & Access Management:**
-  - **Keycloak (OAuth2 / OpenID Connect):** Manages user registration, login, and secure JWT tokens. It supports a unified account model so a single user can easily act as both a **Vehicle Owner** and a **Parking Spot Owner**.
-* **Frontend & UI Styling:**
-  - **Angular 19:** Component-based single-page application using modern TypeScript and Signals-based state management without external reactive libraries.
-  - **SCSS (Sass):** Modular, responsive styling for smooth layouts across smartphones, tablets, and desktop screens.
-* **Mapping & Proximity Algorithms:**
-  - **Leaflet.js & OpenStreetMap:** Free, open-source interactive map framework.
-  - **Haversine Distance Formula in SQL:** Calculates the real-world spherical distance between the Vehicle Owner's GPS coordinates and nearby parking listings.
-  - **Marker Clustering Algorithm:** Automatically groups multiple parking slots inside the same apartment building into a single clean map pin.
+
+- **Backend & Microservices:**
+    - **Java 25 & Spring Boot 4.x:** Core backend framework for developing lightweight, high-performance REST microservices.
+    - **API Gateway:** Acts as the single entry point for all frontend requests, handling request routing, rate limiting, and security token validation.
+    - **Discovery Server:** Automatically registers and tracks the network locations of all active microservices so they can communicate dynamically.
+    - **Declarative REST Clients:** Enables clean, type-safe inter-service communication between backend services.
+- **Database & Persistence:**
+    - **MySQL 8.x:** Relational database management system with strict **Database-per-Service isolation** (`user_db`, `parking_db`, `booking_db`, and `keycloak_db`). No service can directly query another service's database.
+    - **Spring Data JPA & Hibernate:** Simplifies database transactions and data mapping.
+- **Identity & Access Management:**
+    - **Keycloak (OAuth2 / OpenID Connect):** Manages user registration, login, and secure JWT tokens. It supports a unified account model so a single user can easily act as both a **Vehicle Owner** and a **Parking Spot Owner**.
+- **Frontend & UI Styling:**
+    - **Angular 19:** Component-based single-page application using modern TypeScript and Signals-based state management without external reactive libraries.
+    - **SCSS (Sass):** Modular, responsive styling for smooth layouts across smartphones, tablets, and desktop screens.
+- **Mapping & Proximity Algorithms:**
+    - **Leaflet.js & OpenStreetMap:** Free, open-source interactive map framework.
+    - **Haversine Distance Formula in SQL:** Calculates the real-world spherical distance between the Vehicle Owner's GPS coordinates and nearby parking listings.
+    - **Marker Clustering Algorithm:** Automatically groups multiple parking slots inside the same apartment building into a single clean map pin.
 
 ---
 
 ### Data Collection
+
 Because this is a software development project, our data collection consists of three practical datasets:
+
 1. **Real-World Geographic Coordinates:** We will collect real GPS coordinates (latitude and longitude) for popular commercial and residential hubs in Dhaka (such as Dhanmondi, Banani, Mirpur, and Uttara) using OpenStreetMap and Google Maps to simulate real-world parking locations.
 2. **Synthetic Booking & Schedule Data:** We will generate test datasets representing different booking scenarios—including overlapping time requests, hourly, overnight, and monthly durations—to test scheduling algorithms and database transaction handling.
 3. **Sample Verification Documents:** We will use anonymized sample documents (sample NID cards, dummy holding tax slips, and sample garage photos) to test the Admin KYC approval workflow.
 
-**Data Processing:**  
+**Data Processing:**
 All incoming listing and booking data will be validated on both the Angular frontend and backend services (checking date ranges, coordinates, and vehicle plate formats) before being securely saved into the respective MySQL databases.
 
 ---
 
 ### Data Analysis & Evaluation Metrics
+
 We will evaluate the performance and reliability of the platform using three key technical metrics:
+
 1. **Concurrency & Double-Booking Prevention (0% Error Rate):** Using Apache JMeter, we will simulate multiple Vehicle Owners trying to book the exact same parking slot at the exact same second. We will evaluate our transactional database locks to confirm a 0% double-booking failure rate.
 2. **Geospatial Query Speed:** We will measure the response time of our SQL Haversine search query across different radius distances (1 km, 2 km, and 5 km) to ensure results return within milliseconds.
 3. **API Latency & Gateway Throughput:** We will benchmark end-to-end round-trip response times from the Angular frontend through the API Gateway to verify that common API requests (like fetching listings or creating bookings) respond smoothly with low latency.
@@ -108,6 +112,7 @@ We will evaluate the performance and reliability of the platform using three key
 ### Workflow Diagrams
 
 #### A. Distributed Microservices Architecture
+
 ```mermaid
 flowchart TB
     subgraph Client ["Angular 19 Frontend (SCSS)"]
@@ -156,6 +161,7 @@ flowchart TB
 ```
 
 #### B. Operational Workflow Sequence
+
 ```mermaid
 sequenceDiagram
     actor VO as Vehicle Owner
@@ -214,4 +220,3 @@ Nirapod Parking presents a realistic, community-driven software solution to the 
 In land-scarce cities where open land is virtually non-existent and land acquisition costs billions, building new multi-story parking plazas is practically impossible. Nirapod Parking provides an immediate, zero-cost alternative by optimizing infrastructure that is already built. It removes parked vehicles from narrow streets to ease traffic flow, protects commuters from roadside theft and police towing fines, and provides middle-class apartment owners with effortless passive income.
 
 What makes Nirapod Parking uniquely relevant is that it bridges modern distributed software engineering with local social realities. By combining a reliable microservices backend (Java 25, Spring Boot 4.x, MySQL, Keycloak) and an Angular 19 frontend with practical local features—such as 3-point host KYC, Leaflet map clustering for multi-flat buildings, and simple license plate verification for building **Security Guards**—the project delivers a feasible, defensible, and high-impact capstone solution for Bangladesh.
-
